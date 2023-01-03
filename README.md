@@ -3,7 +3,7 @@
 Sistem Rekrutmen adalah sistem yang dibuat untuk keperluan rekrutmen pada perusahaan.
 sistem ini dibuat menggunakan framework Laravel versi 9.
 
-[Syarif Soden]([http://](https://syarifsoden.blogspot.com/)) Suppoer US.
+[Syarif Soden](https://syarifsoden.blogspot.com/) Support US.
 ## Demo Link
 
 [Here](http://) link demo website.
