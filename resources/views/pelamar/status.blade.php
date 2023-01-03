@@ -16,7 +16,7 @@
             <th>Nama</th>
             <th>Email</th>
             <th>Nama Caffe</th>
-            <th>Lokasi Caffe</th>
+            <th>Alamat Caffe</th>
             <th>Foto</th>
             <th>CV</th>
             <th>Surat Lamaran</th>
@@ -28,7 +28,7 @@
             <td>{{ $lamar->nama }}</td>
             <td>{{ $lamar->email }}</td>
             <td>{{ $lamar->nama_caffe }}</td>
-            <td>{{ $lamar->lokasi_caffe }}</td>
+            <td>{{ $lamar->alamat_caffe }}</td>
             <td><a href="{{asset('storage/'.$lamar->foto)}}">Lihat Foto</td>
             <td><a href="{{asset('storage/'.$lamar->cv)}}">Lihat CV</td>
             <td><a href="{{asset('storage/'.$lamar->surat_lamaran)}}">Lihat Surat Lamaran</td>
