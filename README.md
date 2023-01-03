@@ -3,14 +3,18 @@
 Sistem Rekrutmen adalah sistem yang dibuat untuk keperluan rekrutmen pada perusahaan.
 sistem ini dibuat menggunakan framework Laravel versi 9.
 
-[Here](http://docs-s1rsm.demosea.in) is the Simple installation instructions and little about script.
-
+Support Me [Syarif Soden](https://syarifsoden.blogspot.com/).
 ## Demo Link
 
-Email: admin@admin.com
+link demo website [Demo](http://).
 
-Password: admin
+Admin/HRD
+Email: 
+Password: 
 
+User/Pelamar
+Email:
+Password
 
 ## License
 

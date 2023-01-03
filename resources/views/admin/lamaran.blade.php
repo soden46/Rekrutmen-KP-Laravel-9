@@ -1,13 +1,8 @@
-@extends('admin.index')
-
+@extends('dashboard',[
+'title' => 'Daftar Lamaran',
+'pageTitle' => 'Daftar Lamaran'
+])
 @section('content')
-<div class="row mt-5">
-    <div class="col-lg-12 margin-tb">
-        <div class="float-start">
-            <h2>Daftar Lamaran</h2>
-        </div>
-    </div>
-</div>
 
 @if ($message = Session::get('success'))
 <div class="alert alert-success">

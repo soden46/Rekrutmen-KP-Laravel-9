@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Lamaran;
+use App\Models\Caffe;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -19,7 +20,8 @@ class AdminController extends Controller
     }
     public function caffe()
     {
-        return view('admin.caffe');
+        $caffe = Caffe::latest()->paginate(5);
+        return view('admin.daftarcaffe', compact('caffe'));
     }
     public function terima($id)
     {

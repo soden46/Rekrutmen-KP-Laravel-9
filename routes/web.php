@@ -71,6 +71,7 @@ Route::post('/tolak/{id}', [AdminController::class, 'tolak'])->name('tolak');
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/rekrutmen', [AdminController::class, 'rekrutmen'])->middleware('auth');
+Route::get('/caffe', [AdminController::class, 'caffe'])->middleware('auth');
 Route::get('/lamaran', [PelamarController::class, 'lamar'])->middleware('auth');
 Route::get('/status', [PelamarController::class, 'status'])->middleware('auth');
 Route::post('/lamarpekerjaan', [PelamarController::class, 'store'])->name('lamarpekerjaan');

@@ -20,7 +20,7 @@
             <th>Foto</th>
             <th>CV</th>
             <th>Surat Lamaran</th>
-            <th>Aksi</th>
+            <th>Status</th>
         </tr>
         @foreach ($lamaran as $lamar)
         <tr>
