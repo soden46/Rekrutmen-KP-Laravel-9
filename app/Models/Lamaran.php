@@ -10,13 +10,13 @@ class Lamaran extends Model
     use HasFactory;
     public $table = "lamaran";
     protected $fillable = [
-        'id',
-        'nama',
-        'email',
-        'nama_caffe',
-        'alamat_caffe',
+        'id_lamaran',
+        'id_pelamar',
         'foto',
+        'surat_lamaran',
         'cv',
-        'surat_lamaran'
+        'status_lamaran'
     ];
+    protected $primaryKey = 'id_lamaran';
+    public $timestamps = false;
 }

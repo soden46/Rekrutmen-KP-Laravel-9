@@ -21,6 +21,8 @@
     <link href="{{asset('assets/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+    <!-- Custom styles for this template-->
+    <link href="{{ asset('assets/template/backend/sb-admin-2') }}/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 </head>
 
@@ -35,6 +37,17 @@
 
     <!-- Template Javascript -->
     <script src="{{asset('assets/js/main.js')}}"></script>
+
+    <!--SB Admin-->
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery/jquery.min.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/sb-admin-2.min.js"></script>
 </body>
 
 </html>

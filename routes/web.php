@@ -3,11 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LamaranController;
+use App\Http\Controllers\EmailUndanganController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Pelamar\PelamarController;
 use App\Http\Controllers\Admin\AdminController;
+use FontLib\Table\Type\name;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,10 +69,20 @@ Route::group(['namespace' => 'Pelamar', 'middleware' => 'auth', 'prefix' => 'pel
 //end user
 
 //tombol approval
-Route::post('/terima/{id}', [AdminController::class, 'terima'])->name('admin.terima');
-Route::post('/tolak/{id}', [AdminController::class, 'tolak'])->name('tolak');
+Route::post('/terima/{id_lamaran}', [AdminController::class, 'terima'])->name('admin.terima');
+Route::post('/tolak/{id_lamaran}', [AdminController::class, 'tolak'])->name('admin.tolak');
 
+//laporan
+Route::get('/datapelamar', [AdminController::class, 'datapelamar'])->middleware('auth');
+Route::get('/penerimaan', [LaporanController::class, 'datapenerimaan'])->middleware('auth');
+
+//email undangan
+Route::get('emailundangan', [EmailUndanganController::class, 'index'])->name('emailundangan');
+Route::post('kirimemail', [EmailUndanganController::class, 'kirimemail']);
+//
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/rekrutmen', [AdminController::class, 'rekrutmen'])->middleware('auth');
+Route::get('/penerimaan', [LaporanController::class, 'datapenerimaan'])->middleware('auth');
 Route::get('/rekrutmen', [AdminController::class, 'rekrutmen'])->middleware('auth');
 Route::get('/caffe', [AdminController::class, 'caffe'])->middleware('auth');
 Route::get('/lamaran', [PelamarController::class, 'lamar'])->middleware('auth');
@@ -80,3 +93,4 @@ Route::get('/admin.lamaran', [AdminController::class, 'lamaran'])->middleware('a
 Route::get('/logout', [LoginController::class, 'logout'])->name('guest');
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->name('register');
+Route::get('cetak', [LaporanController::class, 'cetaklamaran'])->name('cetak')->middleware('auth');

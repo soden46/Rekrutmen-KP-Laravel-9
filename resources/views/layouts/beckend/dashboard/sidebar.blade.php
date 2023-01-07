@@ -33,30 +33,41 @@
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-calendar"></i>
             <span>Data Absensi</span>
         </a>
     </li>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="/rekrutmen" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-user-plus"></i>
             <span>Rekrutmen</span>
         </a>
     </li>
-    <!-- Nav Item - Daftar Caffe -->
+    <div class="sidebar-heading">
+        Laporan
+    </div>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="/caffe" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-user-plus"></i>
-            <span>Daftar Caffe</span>
+        <a class="nav-link collapsed" href="/datacaffe" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <span>Data Caffe</span>
         </a>
     </li>
-    <!-- Divider -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="/datapelamar" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <span>Data Pelamar</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="/penerimaan" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <span>Data Hasil Penerimaan</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="/lowongan" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <span>Lowongan Pekerjaan</span>
+        </a>
+    </li>
     <hr class="sidebar-divider">
-
     <li class="nav-item">
         <a class="nav-link" href="/logout">
-            <i class="fa fa-sign-out"></i>
             <span>Logout</span></a>
     </li>
 </ul>
@@ -75,13 +86,11 @@
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="/lamaran" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-user-plus"></i>
             <span>Lamar Pekerjaan</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="/status" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-user-plus"></i>
             <span>Status Lamaran</span>
         </a>
     </li>
