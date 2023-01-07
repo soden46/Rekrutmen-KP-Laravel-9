@@ -9,17 +9,21 @@ Support Me [Syarif Soden](https://syarifsoden.blogspot.com/).
 link demo website [Demo](http://).
 
 Admin/HRD
+
 Email: 
+
 Password: 
 
 User/Pelamar
+
 Email:
-Password
+
+Password:
 
 ## License
 
 The script is open-source licensed under the [MIT license](https://opensource.org/licenses/MIT).
-[Contact me](https://www.linkedin.com/in/gautampatadiya/) for query
+[Contact me](https://www.linkedin.com/in/syarif-syarifuddin-1155a2138/) for query
 
 ##
 
