@@ -29,7 +29,6 @@ class LaporanController extends Controller
     {
         $penerimaan =  HasilPenerimaan::where('status_lamaran', 'Lamaran Disetujui')->get();
         $pdf = PDF::loadView('admin.cetak', compact('penerimaan'))->setPaper('a4', 'portrait');
-        $fileName = $penerimaan;
         return $pdf->stream($penerimaan . '.pdf');
     }
 }

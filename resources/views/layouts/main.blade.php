@@ -20,7 +20,8 @@
     <link href="{{asset('assets/lib/animate/animate.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5fafd18292.js" crossorigin="anonymous"></script>
     <!-- Custom styles for this template-->
     <link href="{{ asset('assets/template/backend/sb-admin-2') }}/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">

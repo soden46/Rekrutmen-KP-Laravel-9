@@ -280,7 +280,7 @@
                     <i class="fa fa-quote-right"></i>
                     <div class="row align-items-center">
                         <div class="col-3">
-                            <img src="assets/img/nuansa.jpg" alt="">
+                            <img src="assets/img/nuansajpg.jpg" alt="">
                         </div>
                         <div class="col-9">
                             <h2>NUansa</h2>
