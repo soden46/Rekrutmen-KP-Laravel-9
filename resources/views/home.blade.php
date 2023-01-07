@@ -229,7 +229,7 @@
                     <i class="fa fa-quote-right"></i>
                     <div class="row align-items-center">
                         <div class="col-3">
-                            <img src="assets/img/bentokopi.jpg" alt="">
+                            <img src="assets/img/bentokopi.jpg" alt="bento kopi">
                         </div>
                         <div class="col-9">
                             <h2>Bento Kopi</h2>
@@ -246,7 +246,7 @@
                     <i class="fa fa-quote-right"></i>
                     <div class="row align-items-center">
                         <div class="col-3">
-                            <img src="assets/img/kopinuri.jpg" alt="">
+                            <img src="assets/img/kopinuri.jpg" alt="kopi nuri">
                         </div>
                         <div class="col-9">
                             <h2>Kopi Nuri</h2>
@@ -263,7 +263,7 @@
                     <i class="fa fa-quote-right"></i>
                     <div class="row align-items-center">
                         <div class="col-3">
-                            <img src="assets/img/menoewapng.png" alt="">
+                            <img src="assets/img/menoewapng.png" alt="menoewa kopi">
                         </div>
                         <div class="col-9">
                             <h2>Monoewa kopi</h2>
@@ -280,7 +280,7 @@
                     <i class="fa fa-quote-right"></i>
                     <div class="row align-items-center">
                         <div class="col-3">
-                            <img src="assets/img/nuansajpg.jpg" alt="">
+                            <img src="assets/img/nuansajpg.jpg" alt="nuansa kopi">
                         </div>
                         <div class="col-9">
                             <h2>NUansa</h2>
@@ -297,7 +297,7 @@
                     <i class="fa fa-quote-right"></i>
                     <div class="row align-items-center">
                         <div class="col-3">
-                            <img src="assets/img/kopisini.jpg" alt="">
+                            <img src="assets/img/kopisini.jpg" alt="kopisini">
                         </div>
                         <div class="col-9">
                             <h2>Kopi Sini</h2>
