@@ -49,8 +49,9 @@ class PelamarController extends Controller
 		}
 
 		Lamaran::create($ValidatedData);
-		$userModel = new User();
-		$userData = $userModel->where('id_pelamar', '=', 'pelamar')
+		$nama_caffe = $request->nama_caffe;
+		$alamat_caffe = $request->alamat_caffe;
+		User::where('id_pelamar', '=', $pelamar)
 			->update($ValidatedDataCaffe);
 		return redirect()->back()
 			->with('success', 'Lamaran Anda Berhasil Disimpan dan Menunggu Tindaklanjut');
