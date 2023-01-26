@@ -13,4 +13,6 @@ class Caffe extends Model
         'nama_caffe',
         'alamat_caffe'
     ];
+    protected $primaryKey = 'id_caffe';
+    public $timestamps = false;
 }

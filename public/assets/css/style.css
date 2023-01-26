@@ -2,7 +2,7 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #040404;
+    color: #090909;
     background: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -14,21 +14,21 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-style: italic;
+    font-style: normal;
     color: #121518;
 }
 
 a {
-    color: #036083;
+    color: #121518;
     transition: .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #038306;
+    color: #fab43c;
     outline: none;
     text-decoration: none;
 }
@@ -48,8 +48,8 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #060606;
-    color: #f9fafb;
+    background: #fdfbfb;
+    color: #121518;
     width: 44px;
     height: 44px;
     text-align: center;
@@ -62,8 +62,8 @@ a:focus {
 }
 
 .back-to-top:hover {
-    color: #038306;
-    background: #121518;
+    color: #fab43c;
+    background: #f8f9fa;
 }
 
 .back-to-top i {
@@ -110,7 +110,7 @@ a:focus {
     top: 0;
     width: 100%;
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    box-shadow: 2px 2px 5px rgb(8, 8, 8);
     z-index: 999;
 }
 
@@ -124,12 +124,12 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
-    color: #fbfbfd;
+    color: #0c0c0c;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #f7f8fc;
+    color: #fab43c;
     transition: none;
 }
 
@@ -137,17 +137,17 @@ a:focus {
     margin-top: 0;
     border: 0;
     border-radius: 0;
-    background: #f8f9fa;
+    background: #0a0a0a;
 }
 
 .nav-bar .btn {
-    color: #ffffff;
-    border: 2px solid #fcfdfd;
+    color: #090909;
+    border: 2px solid #050505;
     border-radius: 0;
 }
 
 .nav-bar .btn:hover {
-    background: #f6f6f7;
+    background: #fab43c;
 }
 
 @media (min-width: 992px) {
@@ -161,7 +161,7 @@ a:focus {
 
     .nav-bar,
     .nav-bar .navbar {
-        background: #121518 !important;
+        background: #fafafb !important;
     }
 
     .nav-bar .navbar-brand {
@@ -180,7 +180,7 @@ a:focus {
     .nav-bar,
     .nav-bar .navbar {
         padding: 3px 0;
-        background: #121518 !important;
+        background: #fafafa !important;
     }
 
     .nav-bar a.nav-link {
@@ -195,7 +195,6 @@ a:focus {
         display: none;
     }
 }
-
 
 /*******************************/
 /******** Carousel CSS *********/
@@ -271,7 +270,7 @@ a:focus {
 }
 
 .carousel .carousel-caption .btn:hover {
-    color: #038306;
+    color: #fab43c;
     background: #f4f4f5;
 }
 
@@ -325,7 +324,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 90px 0;
     text-align: center;
-    background: #aa9166;
+    background: #fffefe;
 }
 
 .page-header h2 {
@@ -344,18 +343,18 @@ a:focus {
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #121518;
+    background: #016b23;
 }
 
 .page-header a {
     position: relative;
     padding: 0 12px;
     font-size: 22px;
-    color: #121518;
+    color: #fab43c;
 }
 
 .page-header a:hover {
-    color: #ffffff;
+    color: #fab43c;
 }
 
 .page-header a::after {
@@ -366,7 +365,7 @@ a:focus {
     top: -2px;
     right: -7px;
     text-align: center;
-    color: #121518;
+    color: #025c1e;
 }
 
 .page-header a:last-child::after {
@@ -411,8 +410,8 @@ a:focus {
     left: 0;
     top: 21px;
     background: transparent;
-    border-top: 1px solid #fbfaf7;
-    border-bottom: 1px solid #f9f8f6;
+    border-top: 1px solid #090909;
+    border-bottom: 1px solid #070707;
     z-index: -1;
 }
 
@@ -424,8 +423,8 @@ a:focus {
     left: 0;
     bottom: 20px;
     background: transparent;
-    border-top: 1px solid #f9f8f7;
-    border-bottom: 1px solid #f4f3f1;
+    border-top: 1px solid #fcfefd;
+    border-bottom: 1px solid #fdfffe;
     z-index: -1;
 }
 
@@ -474,7 +473,7 @@ a:focus {
 }
 
 .about .about-text a.btn:hover {
-    color: #121518;
+    color: #fab43c;
     background: #fbfbfa;
 }
 
@@ -548,7 +547,7 @@ a:focus {
 }
 
 .faqs .card-header [data-toggle="collapse"]:after {
-    font-family: 'font Awesome 5 Free';
+    font-family: 'Roboto', sans-serif;
     content: "\f067";
     float: right;
     color: #121518;
@@ -558,7 +557,7 @@ a:focus {
 }
 
 .faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
-    font-family: 'font Awesome 5 Free';
+    font-family: 'Roboto', sans-serif;
     content: "\f068";
     float: right;
     color: #121518;
@@ -590,7 +589,7 @@ a:focus {
 }
 
 .faqs a.btn:hover {
-    color: #121518;
+    color: #fab43c;
     background: #f9f8f6;
 }
 
@@ -622,7 +621,7 @@ a:focus {
     position: absolute;
     top: 0;
     right: 0;
-    color: #333333;
+    color: #090909;
     font-size: 60px;
     transform: rotate(45deg);
     z-index: 1;
@@ -644,7 +643,7 @@ a:focus {
 }
 
 .testimonial .testimonial-item p {
-    color: #999999;
+    color: #040404;
     font-size: 16px;
     margin: 0;
 }
@@ -745,7 +744,7 @@ a:focus {
 }
 
 .blog .blog-item a.btn:hover {
-    color: #121518;
+    color: #fab43c;
 }
 
 .blog .owl-nav,
@@ -768,14 +767,14 @@ a:focus {
 }
 
 .blog .pagination .page-link {
-    color: #121518;
+    color: #fab43c;
     border-radius: 0;
     border-color: #fdfdfc;
 }
 
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
-    color: #121518;
+    color: #fab43c;
     background: #fdfcfb;
 }
 
@@ -949,7 +948,7 @@ a:focus {
     display: inline-block;
     margin: 5px;
     padding: 8px 15px;
-    color: #038306;
+    color: #fab43c;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
@@ -962,7 +961,7 @@ a:focus {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
     background: #fefefd;
-    color: #038306;
+    color: #fab43c;
 }
 
 .portfolio .load-more {
@@ -976,8 +975,8 @@ a:focus {
 }
 
 .portfolio .load-more .btn:hover {
-    color: #121518;
-    background: #038306;
+    color: #fab43c;
+    background: #fefffe;
 }
 
 .portfolio .portfolio-item {
@@ -1036,17 +1035,17 @@ a:focus {
 }
 
 .portfolio figure a {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     color: #fffdfb;
     font-size: 25px;
     font-weight: 600;
-    font-style: italic;
+    font-style: normal;
     transition: .3s;
 }
 
 .portfolio figure a:hover {
     text-decoration: none;
-    color: #ffffff;
+    color: #fab43c;
 }
 
 .portfolio figure span {
@@ -1150,7 +1149,7 @@ a:focus {
 }
 
 .contact .contact-form .btn:hover {
-    color: #121518;
+    color: #fab43c;
     background: #fbfbfa;
 }
 
@@ -1185,7 +1184,7 @@ a:focus {
 .single .ul-group li::before {
     position: relative;
     content: "\f0da";
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     margin-right: 10px;
 }
@@ -1201,8 +1200,8 @@ a:focus {
     position: relative;
     margin-top: 45px;
     padding-top: 180px;
-    background: #121518;
-    color: #ffffff;
+    background: #fab43c;
+    color: #080808;
 }
 
 .footer .footer-about,
@@ -1210,7 +1209,7 @@ a:focus {
 .footer .footer-contact {
     position: relative;
     margin-bottom: 45px;
-    color: #999999;
+    color: #030303;
 }
 
 .footer .footer-about h2,
@@ -1220,13 +1219,13 @@ a:focus {
     margin-bottom: 30px;
     font-size: 25px;
     font-weight: 600;
-    color: #fffefe;
+    color: #070707;
 }
 
 .footer .footer-link a {
     display: block;
     margin-bottom: 10px;
-    color: #999999;
+    color: #080808;
     transition: .3s;
 }
 
@@ -1239,7 +1238,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #fefefd;
+    color: #fcfcfb;
     letter-spacing: 1px;
 }
 
@@ -1259,7 +1258,7 @@ a:focus {
 .footer .footer-social a i {
     margin-right: 15px;
     font-size: 18px;
-    color: #fdfcfb;
+    color: #080808;
 }
 
 .footer .footer-social a:last-child i {
@@ -1267,7 +1266,7 @@ a:focus {
 }
 
 .footer .footer-social a:hover i {
-    color: #999999;
+    color: #fab43c;
 }
 
 .footer .footer-menu .f-menu {
@@ -1279,15 +1278,15 @@ a:focus {
 }
 
 .footer .footer-menu .f-menu a {
-    color: #999999;
+    color: #080808;
     font-size: 16px;
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .3);
+    border-right: 1px solid #fab43c;
 }
 
 .footer .footer-menu .f-menu a:hover {
-    color: #fcfbfa;
+    color: #fab43c;
 }
 
 .footer .footer-menu .f-menu a:last-child {
@@ -1311,13 +1310,13 @@ a:focus {
 }
 
 .footer .copyright p a {
-    color: #fafcfa;
+    color: #fab43c;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
 .footer .copyright p a:hover {
-    color: #ffffff;
+    color: #fab43c;
 }
 
 @media (max-width: 768px) {
@@ -1383,7 +1382,7 @@ a:focus {
     padding: 20px 0;
     text-align: center;
     font-size: 60px;
-    color: #aa9166;
+    color: #fbfbfb;
     background: #121518;
     transition: .5s;
 }
@@ -1397,12 +1396,12 @@ a:focus {
     padding: 25px 15px 15px 15px;
     font-size: 30px;
     font-weight: 600;
-    color: #aa9166;
+    color: #fefefe;
 }
 
 .service .service-item p {
     margin: 0;
-    color: #999999;
+    color: #fcf9f9;
     padding: 0 25px 25px 25px;
     font-size: 18px;
 }
@@ -1415,14 +1414,14 @@ a:focus {
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #aa9166;
-    border: 2px solid #aa9166;
+    color: #fefefd;
+    border: 2px solid #090909;
     border-radius: 0;
     background: #121518;
     transition: .3s;
 }
 
 .service .service-item:hover a.btn {
-    color: #121518;
-    background: #aa9166;
+    color: #fab43c;
+    background: #0a0a0a;
 }

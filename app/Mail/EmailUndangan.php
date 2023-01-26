@@ -30,7 +30,7 @@ class EmailUndangan extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Email Undangan',
+            subject: 'Undangan Tes Wawancara',
         );
     }
 

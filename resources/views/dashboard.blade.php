@@ -47,12 +47,7 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">{{ $pageTitle ?? '' }}</h1>
-                    @can('admin')
-                    @include(admin.index)
-                    @endcan
-                    @can('Pelamar')
-                    @include(pelamar.index)
-                    @endcan
+
                     @yield('content')
                 </div>
                 <!-- /.container-fluid -->

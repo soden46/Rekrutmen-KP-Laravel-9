@@ -22,23 +22,21 @@
             <th>Surat Lamaran</th>
             <th>Status</th>
         </tr>
+        @php $no = 1; @endphp
         @foreach ($lamaran as $lamar)
         <tr>
-            <td>{{ $lamar->id }}</td>
-            <td>{{ $lamar->nama }}</td>
+            <td>{{ $no++ }}</td>
+            <td>{{ Auth::user()->nama }}</td>
             <td>{{ $lamar->email }}</td>
-            <td>{{ $lamar->nama_caffe }}</td>
-            <td>{{ $lamar->alamat_caffe }}</td>
+            <td>{{ Auth::user()->nama_caffe }}</td>
+            <td>{{ Auth::user()->alamat_caffe }}</td>
             <td><a href="{{asset('storage/'.$lamar->foto)}}">Lihat Foto</td>
             <td><a href="{{asset('storage/'.$lamar->cv)}}">Lihat CV</td>
             <td><a href="{{asset('storage/'.$lamar->surat_lamaran)}}">Lihat Surat Lamaran</td>
-            <td>{{ $lamar->status }}</td>
+            <td>{{ $lamar->status_lamaran }}</td>
         </tr>
         @endforeach
     </table>
-    <div class=" row text-center">
-        {!! $lamaran->links() !!}
-    </div>
 </div>
 
 

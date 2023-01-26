@@ -7,6 +7,10 @@
     @include('component.alert-dismissible')
     <form action="/lamarpekerjaan " method="POST" enctype="multipart/form-data">
         @csrf
+
+        <div class="form-floating">
+            <input type="text" name="id_pelamar" class="form-control" id="floatingInput" value="{{Auth::user()->id_pelamar}}" hidden>
+        </div>
         <div class="form-floating">
             <label for="floatingInput">Nama</label>
             <input type="text" name="nama" class="form-control @error('nama')is-invalid @enderror" id="floatingInput" placeholder="Nama Lengkap" required value="{{old('nama')}}">

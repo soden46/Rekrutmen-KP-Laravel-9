@@ -42,9 +42,9 @@
                                     <img src="assets/img/logobgi.png" alt="Logo" width="" height="46">
                                 </a>
                             </div>
-                            <a href="recruitment" class="nav-item nav-link active">Recruitment</a>
+                            <a href="recruitment" class="nav-item nav-link">Recruitment</a>
                             <a href="event" class="nav-item nav-link">Bento Event</a>
-                            <a href="faq" class="nav-item nav-link">FAQ</a>
+                            <a href="faq" class="nav-item nav-link active">FAQ</a>
                             <a href="contact" class="nav-item nav-link">Hubungi Kami</a>
                         </div>
                         <div class="ml-auto">

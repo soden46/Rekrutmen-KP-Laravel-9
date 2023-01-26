@@ -25,9 +25,8 @@ class RegisterController extends Controller
         ]);
         $ValidatedData['password'] = Hash::make($ValidatedData['password']);
 
-        dd($ValidatedData);
-        // User::create($ValidatedData);
-        // return redirect('/login')
-        //     ->with('success', 'Pendaftaran berhasil, Silahkan Masuk');
+        User::create($ValidatedData);
+        return redirect('/login')
+            ->with('success', 'Pendaftaran berhasil, Silahkan Masuk');
     }
 }

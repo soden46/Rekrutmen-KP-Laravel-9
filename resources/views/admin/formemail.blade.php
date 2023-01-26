@@ -15,7 +15,7 @@
                 @csrf
                 <div class="form-group">
                     <label>Alamat Email</label>
-                    <input type="email" class="form-control @error('email')is-invalid @enderror"" id=" email" name="email">
+                    <input type="email" class="form-control @error('email')is-invalid @enderror" id=" email" name="email">
                     @error('email')
                     <div class="invalid-feedback">
                         {{$message}}

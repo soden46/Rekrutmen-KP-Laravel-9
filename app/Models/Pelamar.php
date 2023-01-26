@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DataCaffe extends Model
+class Pelamar extends Model
 {
     use HasFactory;
-    public $table = "laporan_data_caffe";
+    public $table = "pelamar";
     protected $fillable = [
-        'id_caffe',
-        'nama_caffe',
-        'alamat_caffe',
+        'id_pelamar',
         'nama_pelamar',
+        'email',
     ];
 }

@@ -10,9 +10,12 @@ class DataPelamar extends Model
     use HasFactory;
     public $table = "laporan_data_pelamar";
     protected $fillable = [
-        'id_lowongan',
-        'nama_jabatan',
-        'nama_caffe',
-        'alamat_caffe',
+        'id_lamaran',
+        'id_pelamar',
+        'foto',
+        'cv',
+        'surat_lamaran',
+        'nama_pelamar',
+        'email',
     ];
 }

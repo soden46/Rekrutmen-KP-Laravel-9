@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Lamaran;
+use Barryvdh\DomPDF\Facade\PDF;
 use App\Models\Caffe;
 use Illuminate\Http\Request;
 
@@ -20,8 +21,16 @@ class AdminController extends Controller
     }
     public function caffe()
     {
-        $caffe = Caffe::latest()->paginate(5);
-        return view('admin.daftarcaffe', compact('caffe'));
+        $caffe = Caffe::first()->paginate(5);
+        $jumlah = Caffe::count();
+        return view('admin.daftarcaffe', compact('caffe', 'jumlah'));
+    }
+    public function cetakcaffe()
+    {
+        $cetakcaffe =  Caffe::get();
+        $jumlah = Caffe::count();
+        $pdfcaffe = PDF::loadView('admin.laporan.cetakcaffe2', compact('cetakcaffe', 'jumlah'));
+        return $pdfcaffe->stream('Laporan Data Caffe' . '.pdf');
     }
     public function terima($id_lamaran)
     {

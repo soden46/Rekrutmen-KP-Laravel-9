@@ -1,6 +1,6 @@
 @extends('dashboard',[
-'title' => 'Daftar Lamaran',
-'pageTitle' => 'Daftar Lamaran'
+'title' => 'Data Hasil Penerimaan',
+'pageTitle' => 'Data Hasil Penerimaan'
 ])
 @section('content')
 

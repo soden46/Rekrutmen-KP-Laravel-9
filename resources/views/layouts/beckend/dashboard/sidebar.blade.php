@@ -36,6 +36,12 @@
             <span>Rekrutmen</span>
         </a>
     </li>
+    <!-- <li class="nav-item">
+        <a class="nav-link collapsed" href="/caffe" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fa fa-building-o" aria-hidden="true"></i>
+            <span>Data Caffe</span>
+        </a>
+    </li> -->
     <div class="sidebar-heading">
         Laporan:
     </div>
