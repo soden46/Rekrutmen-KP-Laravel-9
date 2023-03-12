@@ -11,6 +11,7 @@ class Pelamar extends Model
     public $table = "pelamar";
     protected $fillable = [
         'id_pelamar',
+        'id_user',
         'nama_pelamar',
         'email',
     ];

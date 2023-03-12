@@ -3,7 +3,7 @@
 
     <!-- Sidebar - Brand -->
     <div class="sidebar-brand-icon d-flex align-items-center justify-content-center">
-        <img src="assets/img/logobgiputih.png" alt="Logo" width="" height="80"></img>
+        <img src="assets/img/Logobgiputih.png" alt="Logo" width="" height="80"></img>
     </div>
     <a class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class=" sidebar-brand-text mx-3">
@@ -16,56 +16,67 @@
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-users"></i>
-            <span>Data Karyawan</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - Utilities Collapse Menu -->
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Data Karyawan</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{url('tambahcaffe')}}">Tambah Caffe</a>
+                        <h6 class="collapse-header">Pilih Group Caffe:</h6>
+                        <a class="collapse-item" href="{{url('bento')}}">Bento Kopi</a>
+                        <a class="collapse-item" href="{{url('nuri')}}">Kopi Nuri</a>
+                        <a class="collapse-item" href="{{url('stako')}}">Stako Kopi</a>
+                        <a class="collapse-item" href="{{url('kopisini')}}">Kopisini</a>
+                        <a class="collapse-item" href="{{url('menoewa')}}">Menoewa kopi</a>
+                        <a class="collapse-item" href="{{url('nuansa')}}">NUansa Kopi</a>
+                        <a class="collapse-item" href="{{url('njati')}}">Njati Kopi</a>
+                        <a class="collapse-item" href="{{url('kaktus')}}">Kaktus Coffe</a>
+                        <a class="collapse-item" href="{{url('easy')}}">Easy Breezy</a>
+                        <a class="collapse-item" href="{{url('river')}}">River Garden</a>
+                        <a class="collapse-item" href="{{url('pendopo')}}">Pendopo Malioboro</a>
+                    </div>
+                </div>
+            </li>
+    <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            <span>Data Absensi</span>
-        </a>
-    </li>
-    <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="/rekrutmen" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+        <a class="nav-link" href="{{url('/rekrutmen')}}">
+            <i class="fa fa-handshake-o"></i>
             <span>Rekrutmen</span>
         </a>
     </li>
-    <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="/caffe" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fa fa-building-o" aria-hidden="true"></i>
-            <span>Data Caffe</span>
+    <li class="nav-item">
+        <a class="nav-link" href="{{url('admin/news/create')}}">
+            <i class="fa fa-handshake-o"></i>
+            <span>Berita</span>
         </a>
-    </li> -->
+    </li>
     <div class="sidebar-heading">
         Laporan:
     </div>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="/datacaffe" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fa fa-building-o" aria-hidden="true"></i>
+        <a class="nav-link" href="{{url('/caffe')}}">
+            <i class="fa fa-building-o"></i>
             <span>Data Caffe</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="/datapelamar" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link" href="{{url('/datapelamar')}}">
             <i class="fas fa-fw fa-users"></i>
             <span>Data Pelamar</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="/penerimaan" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fa fa-book" aria-hidden="true"></i>
+        <a class="nav-link" href="{{url('/penerimaan')}}" >
+            <i class="fa fa-book"></i>
             <span>Data Hasil Penerimaan</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="/lowongan" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+        <a class="nav-link" href="{{url('/lowongan')}}" >
+            <i class="fa fa-newspaper-o"></i>
             <span>Lowongan Pekerjaan</span>
         </a>
     </li>
@@ -80,21 +91,29 @@
 @can('pelamar')
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     <div class="sidebar-brand-icon d-flex align-items-center justify-content-center">
-        <img src="assets/img/logobgiputih.png" alt="Logo" width="" height="80"></img>
+        <img src="assets/img/Logobgiputih.png" alt="Logo" width="" height="80"></img>
     </div>
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
         <div class="sidebar-brand-text mx-3">{{ Auth::user()->nama }}</div>
     </a>
     <hr class="sidebar-divider my-0">
-    <!-- Nav Item - Utilities Collapse Menu -->
+    <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="/lamaran" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link" href="/biodata">
+            <i class="fa fa-info-circle"></i>
+            <span>Biodata</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/lamaran">
+            <i class="fa fa-upload"></i>
             <span>Lamar Pekerjaan</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link collapsed" href="/status" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link" href="/status">
+            <i class="fa fa-info-circle"></i>
             <span>Status Lamaran</span>
         </a>
     </li>

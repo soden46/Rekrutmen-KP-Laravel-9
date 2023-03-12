@@ -10,8 +10,11 @@ class Caffe extends Model
     public $table = "caffe";
     protected $fillable = [
         'id_caffe',
+        'group_caffe',
         'nama_caffe',
-        'alamat_caffe'
+        'provinsi',
+        'alamat_caffe',
+        'jumlah_pegawai'
     ];
     protected $primaryKey = 'id_caffe';
     public $timestamps = false;

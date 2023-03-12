@@ -19,7 +19,7 @@ class LaporanPenerimaanController extends Controller
     public function cetaklamaran()
     {
         $penerimaan =  HasilPenerimaan::where('status_lamaran', 'Lamaran Disetujui')->get();
-        $pdfpenerimaan = PDF::loadView('admin.cetak', compact('penerimaan'))->setPaper('a4', 'portrait');
+        $pdfpenerimaan = PDF::loadView('admin.laporan.cetak', compact('penerimaan'))->setPaper('a4', 'portrait');
         return $pdfpenerimaan->stream($penerimaan . '.pdf');
     }
 }

@@ -39,11 +39,11 @@
                     <div class="navbar-nav mr-auto">
                         <div class="logo">
                             <a href="i/">
-                                <img src="assets/img/logobgi.png" alt="Logo" width="" height="46">
+                                <img src="assets/img/bgi.png" alt="Logo" width="" height="46">
                             </a>
                         </div>
                         <a href="/recruitment" class="nav-item nav-link active">Recruitment</a>
-                        <a href="about.html" class="nav-item nav-link">Bento Event</a>
+                        <a href="/newsgroup" class="nav-item nav-link">Berita</a>
                         <a href="service.html" class="nav-item nav-link">FAQ</a>
                         <a href="team.html" class="nav-item nav-link">Hubungi Kami</a>
 

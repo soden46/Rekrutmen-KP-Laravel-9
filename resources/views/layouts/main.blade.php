@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Rekrutmen Bento Kopi</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Law Firm Website Template" name="keywords">
-    <meta content="Law Firm Website Template" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
     <!-- Favicon -->
     <link href="assets/img/favicon.ico" rel="icon">
@@ -23,8 +23,10 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/5fafd18292.js" crossorigin="anonymous"></script>
     <!-- Custom styles for this template-->
-    <link href="{{ asset('assets/template/backend/sb-admin-2') }}/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/template/backend/sb-admin-2/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+    
+    
 </head>
 
 <body>
@@ -38,17 +40,18 @@
 
     <!-- Template Javascript -->
     <script src="{{asset('assets/js/main.js')}}"></script>
-
     <!--SB Admin-->
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery/jquery.min.js"></script>
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    
+<!--template-->
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/sb-admin-2.min.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/js/sb-admin-2.min.js') }}"></script>
 </body>
 
 </html>

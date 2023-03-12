@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Pelamar;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Hash;
-
 use App\Models\User;
+use App\Models\BioModel;
 
 
 class ProfileController extends Controller
@@ -17,16 +16,43 @@ class ProfileController extends Controller
 		return view('pelamar.profile');
 	}
 
-	public function update(Request $request, User $user)
+    public function biodata()
+	{
+		return view('pelamar.biodata');
+	}
+	public function update(Request $request, User $user, BioModel $biomodel)
 	{
 		if ($request->password) {
 			$password = Hash::make($request->password);
 		} else {
 			$password = $request->old_password;
 		}
-
-		$request->request->add(['password' => $password]);
-		$user->update($request->all());
-		return back()->with('success', 'Proflie updated successfully');
+		return back()->with('success', 'Profil Anda Sukses Diperbaharui');
+	}
+	public function save(Request $request)
+	{
+		$validatedData = $request->validate([
+            'id_user' => 'required',
+            'nama' => 'required',
+            'alamat' => 'required',
+            'tgl_lahir' => 'required',
+            'domisili' => 'required',
+            'nik' => 'required',
+            'nkk' => 'required',
+            'nowa' => 'required',
+            'no_saudara' => 'required',
+        ]);
+        BioModel::create([
+        'id_user' => $request->id_user,
+        'nama' => $request->nama,
+        'alamat' => $request->alamat,
+        'tgl_lahir' => date("Y-m-d", strtotime($request->tgl_lahir)),
+        'domisili' => $request->domisili,
+        'nik' => $request->nik,
+        'nkk' => $request->nkk,
+        'no_wa' => $request->nowa,
+        'no_saudara' => $request->no_saudara,
+        ]);
+		return back()->with('success', 'Biodata Sukses Diperbaharui');
 	}
 }

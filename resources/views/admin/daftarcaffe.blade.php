@@ -14,19 +14,44 @@
     <tr>
         <th>No</th>
         <th>Nama Caffe</th>
+        <th>Provinsi</th>
         <th>Alamat Caffe</th>
+        <th>Jumlah Pegawai</th>
+        <th>Aksi</th>
     </tr>
     @foreach ($caffe as $kafe)
     <tr>
 
         <td>{{ $kafe->id_caffe }}</td>
         <td>{{ $kafe->nama_caffe }}</td>
+        <td>{{ $kafe->provinsi }}</td>
         <td>{{ $kafe->alamat_caffe }}</td>
-        <td>{{$jumlah}}</td>
+        <td>{{ $kafe->jumlah_pegawai }}</td>
+        <td>
+            <div class="btn-group" style="width:135px">
+                <form action="{{ route('admin.destroy',$kafe->id_caffe) }}" method="Post">
+                    <a class="btn btn-primary" href="{{ route('admin.edit',$kafe->id_caffe) }}">Edit</a>
+                     @csrf
+                     @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </td>
     </tr>
     @endforeach
+    <tr>
+        <th colspan="4">Total Pegawai: {{$jumlahp}}</th>
+    </tr>
+    <tr>
+        <th colspan="4">Total Caffe: {{$jumlahc}}</th>
+        <hr>
+    </tr>
 </table>
-<td>Jumlah: {{$jumlah}}</td>
+<div class="row text-center">
+    <div>
+        {!! $caffe->links() !!}
+    </div>
+</div>
 
 
 @endsection

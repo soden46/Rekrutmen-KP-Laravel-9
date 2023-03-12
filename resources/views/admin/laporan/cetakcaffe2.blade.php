@@ -15,17 +15,17 @@
         <tr class="font-12">
             <th style="width: 30px">Nama Caffe</th>
             <th style="width: 30px">Alamat Caffe</th>
+            <th style="width: 30px">Jumlah Pegawai</th>
         </tr>
         @foreach ($cetakcaffe as $cetakcafe)
         <tr>
             <td style="width: 30px">{{ $cetakcafe->nama_caffe}}</td>
             <td style="width: 30px">{{ $cetakcafe->alamat_caffe }}</td>
+            <td style="width: 15px">{{ $cetakcafe->jumlah_pegawai }}</td>
         </tr>
         @endforeach
         <tr>
-            <td>Jumlah:
-            <td>{{$jumlah}}</td>
-            </td>
+            <th colspan="3">Total Pegawai: {{$jumlahp}}</th>
         </tr>
     </table>
 </body>

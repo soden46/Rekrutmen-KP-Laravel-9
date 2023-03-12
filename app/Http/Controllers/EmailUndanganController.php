@@ -14,17 +14,20 @@ class EmailUndanganController extends Controller
 {
     public function index()
     {
-        return view('admin.formemail');
+        $data = HasilPenerimaan::where("status_lamaran", "Lamaran Disetujui")->get();
+        return view('admin.formemail',compact('data'));
+        
     }
 
 
     public function kirimemail(Request $request)
     {
+        $email = $request->input('emails');
         $mailData = $request->validate([
-            'email' => 'required'
+            'emails' => 'required'
 
         ]);
-        $email = $request->get('email');
+        
         $mailData = $request->pesan;
         Mail::to($email)->send(new EmailUndangan($mailData));
         return back()->with('success', 'Email Terkirim');

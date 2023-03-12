@@ -3,18 +3,22 @@
 'pageTitle' => 'Form Pengajuan Lamaran',
 ])
 @section('content')
+@if ($message = Session::get('success'))
+<div class="alert alert-success">
+    <p>{{ $message }}</p>
+</div>
+@endif
 <div class="h-50 d-inline-block" style="max-width: 75%">
-    @include('component.alert-dismissible')
+    <marquee>Silahkan Isi Biodat Anda Terlebih Dahulu Pada Menu Biodata Sebelum Mengajukan Lamaran </marquee>
     <form action="/lamarpekerjaan " method="POST" enctype="multipart/form-data">
         @csrf
-
         <div class="form-floating">
-            <input type="text" name="id_pelamar" class="form-control" id="floatingInput" value="{{Auth::user()->id_pelamar}}" hidden>
+            <input type="text" name="id_pelamar" class="form-control" id="floatingInput" value="{{$pelamar}}" hidden>
         </div>
         <div class="form-floating">
             <label for="floatingInput">Nama</label>
-            <input type="text" name="nama" class="form-control @error('nama')is-invalid @enderror" id="floatingInput" placeholder="Nama Lengkap" required value="{{old('nama')}}">
-            @error('nama')
+            <input type="text" name="nama_pelamar" class="form-control @error('nama_pelamar')is-invalid @enderror" id="floatingInput" placeholder="Nama Lengkap" required value="{{old('nama_pelamar')}}">
+            @error('nama_pelamar')
             <div class="invalid-feedback">
                 {{$message}}
             </div>

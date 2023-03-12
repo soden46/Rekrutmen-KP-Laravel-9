@@ -14,8 +14,8 @@
         <th>Id Lamaran</th>
         <th>Id Pelamar</th>
         <th>Foto</th>
-        <th>Surat Lamaran</th>
         <th>CV</th>
+        <th>Surat Lamaran</th>
         <th>Status</th>
         <th>Aksi</th>
     </tr>
@@ -23,9 +23,9 @@
     <tr>
         <td>{{ $lamar->id_lamaran }}</td>
         <td>{{ $lamar->id_pelamar }}</td>
-        <td><a href="{{asset('storage/'.$lamar->foto)}}">Lihat Foto</td>
-        <td><a href="{{asset('storage/'.$lamar->cv)}}">Lihat CV</td>
-        <td><a href="{{asset('storage/'.$lamar->surat_lamaran)}}">Lihat Surat Lamaran</td>
+        <td><a href="{{asset('assets/storage/public/'.$lamar->foto)}}">Lihat Foto</td>
+        <td><a href="{{asset('assets/storage/public/'.$lamar->cv)}}">Lihat CV</td>
+        <td><a href="{{asset('assets/storage/public/'.$lamar->surat_lamaran)}}">Lihat Surat Lamaran</td>
         <td>{{ $lamar->status_lamaran }}</td>
         <td>
             <div class="btn-group">

@@ -3,6 +3,7 @@
 @section('content')
 <main class="form-signin w-100 m-auto">
     <form action="/register" method="POST">
+        @include('component.alert-dismissible')
         @csrf
         <h1 class="h3 mb-3 fw-normal">DAFTAR</h1>
 
@@ -45,7 +46,7 @@
             @enderror
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">DAFTAR</button>
-        <p class="mt-2 mb-1 text-muted"><a href="">Sudah Punya Akun? Masuk</a></p>
+        <p class="mt-2 mb-1 text-muted"><a href="{{'/login'}}">Sudah Punya Akun? Masuk</a></p>
     </form>
 </main>
 @endsection

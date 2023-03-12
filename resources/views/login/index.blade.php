@@ -2,14 +2,6 @@
 
 @section('content')
 <main class="form-signin w-100 m-auto">
-    <!-- @if (session('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ session('success') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    @endif -->
     @include('component.alert-dismissible')
     <form action="/authenticate" method="post">
         @csrf
@@ -25,7 +17,7 @@
         </div>
         <div class="form-floating">
             <label for="password">Password</label>
-            required <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
         </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">MASUK</button>

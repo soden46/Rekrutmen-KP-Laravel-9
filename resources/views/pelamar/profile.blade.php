@@ -1,10 +1,12 @@
 @extends('dashboard',[
-'title' => 'Welcome',
-'pageTitle' => 'Profile',
+'title' => 'Edit Profile',
+'pageTitle' => 'Edit Profile',
 ])
 @section('content')
-@include('layout.component.alert-dismissible')
-
+@if ($message = Session::get('success'))
+<div class="alert alert-success">
+    <p>{{ $message }}</p>
+</div>
 <div class="row">
 	<div class="col-lg-6">
 		<div class="card">
@@ -38,10 +40,10 @@
 			<div class="card-body">
 				<form method="POST" action="{{ route('profile.update',Auth::user()->id) }}">
 					@csrf
-					@method('PATCH')
+					@method('POST')
 					<div class="form-group">
-						<label for="name">Name</label>
-						<input required="" value="{{ Auth::user()->nama }}" class="form-control" type="" id="name" name="name">
+						<label for="name">Nama Lengkap</label>
+						<input required="" value="{{ Auth::user()->nama }}" class="form-control" type="" id="nama" name="nama">
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>

@@ -11,17 +11,22 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form method="POST" action="/kirimemail">
+            <form method="POST" action="kirimemail" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group">
-                    <label>Alamat Email</label>
-                    <input type="email" class="form-control @error('email')is-invalid @enderror" id=" email" name="email">
-                    @error('email')
+                <div>Email</div>
+                <div class="form-check form-check-inline">
+                    @foreach($data as $dat)
+                    <input type="checkbox" class="form-check-input @error('emails')is-invalid @enderror" id="emails" name="emails[]" value="{{$dat->email}}">{{$dat->email}}</input>
+                            @endforeach
+                             
+                            @error('emails')
                     <div class="invalid-feedback">
                         {{$message}}
                     </div>
                     @enderror
-                </div>
+                    
+                 </div>
+                
                 <div class=" form-group">
                     <label>Pesan</label>
                     <marquee>Edit Informasi Yang Diperlikan dan Jangan Hapus text p </marquee>
@@ -49,4 +54,35 @@
     </div>
 </div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+      
+    $(".send-email").click(function(){
+        var selectRowsCount = $("input[class='user-checkbox']:checked").length;
+  
+        if (selectRowsCount > 0) {
+  
+            var ids = $.map($("input[class='user-checkbox']:checked"), function(c){return c.value; });
+  
+            $.ajax({
+               type:'POST',
+               url:"{{ route('kirimemail') }}",
+               data:{ids:ids},
+               success:function(data){
+                  alert(data.success);
+               }
+            });
+  
+        }else{
+            alert("Please select at least one user from list.");
+        }
+        console.log(selectRowsCount);
+    });
+  
+</script>
 @endsection

@@ -16,12 +16,21 @@
     <title>Pelamar | {{ $title ?? 'Dashboard' }}</title>
     @endcan
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('template/backend/sb-admin-2') }}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('template/backend/sb-admin-2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/5fafd18292.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
-    <link href="{{ asset('assets/template/backend/sb-admin-2') }}/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/template/backend/sb-admin-2/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <!--Trix Editor CSS-->
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/trix.css')}}">
+    
+    <style type="text/css">
+        trix-toolbar [data-trix-button-group="file-tools"]{
+            dysplay: none;
+        }
+    </style>
     @stack('css')
+        
 </head>
 
 <body id="page-top">
@@ -47,7 +56,6 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">{{ $pageTitle ?? '' }}</h1>
-
                     @yield('content')
                 </div>
                 <!-- /.container-fluid -->
@@ -98,21 +106,16 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery/jquery.min.js"></script>
-    <script src="{{ asset('asstes/template/backend/sb-admin-2') }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    
+<!--template-->
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/demo/chart-area-demo.js"></script>
-    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/demo/chart-pie-demo.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2/js/sb-admin-2.min.js') }}"></script>
     <script type="text/javascript">
         $.ajaxSetup({
             headers: {
@@ -120,6 +123,10 @@
             }
         });
     </script>
+    
+    <!--Trix Editor JS-->
+    <!--Trix Editor JS-->
+<script type="text/javascript" src="{{asset('assets/js/trix.js')}}"></script>
     @stack('js')
 </body>
 

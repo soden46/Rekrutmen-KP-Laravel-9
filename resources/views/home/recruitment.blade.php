@@ -1,306 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Rekrutmen Bento Kopi</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Law Firm Website Template" name="keywords">
-    <meta content="Law Firm Website Template" name="description">
-
-    <!-- Favicon -->
-    <link href="assets/img/favicon.ico" rel="icon">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- CSS Libraries -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="{{asset('assets/lib/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-</head>
-
-<body>
-    <!-- Nav Bar Start -->
-    <div class="nav-bar">
-        <div class="container-fluid">
-
-            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                <a href="#" class="navbar-brand">MENU</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto">
-                        <div class="logo">
-                            <a href="">
-                                <img src="assets/img/logobgi.png" alt="Logo" width="" height="46">
-                            </a>
-                        </div>
-                        <a href="recruitment" class="nav-item nav-link active">Recruitment</a>
-                        <a href="event" class="nav-item nav-link">Bento Event</a>
-                        <a href="faq" class="nav-item nav-link">FAQ</a>
-                        <a href="contact" class="nav-item nav-link">Hubungi Kami</a>
-                    </div>
-                    <div class="ml-auto">
-                        <a class="btn" href="{{route('login')}}">Masuk</a>
-                        <a class="btn" href="{{route('register')}}">Daftar</a>
-                    </div>
-
-            </nav>
-        </div>
-    </div>
-    <!-- Nav Bar End -->
-
-    <!-- Service Start -->
-    <div class="service">
-        <div class="container">
-            <div class="section-header">
-                <h2>Daftar Caffe</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Bento Kopi</h3>
-                        <p>
-                            Bento Kopi memiliki 30 lokasi caffe yang bertempat di Solo dan D.I Yogyakarta
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
+@extends('layouts.home.master',[
+'title' => 'Rekrutmen | Bento Group Indonesia',
+'pageTitle' => 'rekrutmen | Bento Group Indonesia',
+])
+@section('content')
+<!-- Service Start -->
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Persentase Data Caffe Dan Lokasi</h3>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>NUansa Kopi</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
+                <div class="panel-body" align-item="center">
+                    <div id="pie_chart" style="width:450px; height:250px;">
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Easy Breezy</h3>
-                        <p>
-                            Easy Breezy berlokasi di Gedongan Lor, Wedomartani, Kec. Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55584
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Kopi Nuri</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Stako Kopi</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>kopisini</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Kopisini</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Menoewa Kopi</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>njati kopi</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Kaktus Coffe</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>River Garden</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-item">
-                        <div class="service-icon">
-                            <i class=""></i>
-                        </div>
-                        <h3>Pendopo Malioboro</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                            velit non
-                        </p>
-                        <a class="btn" href="">Learn More</a>
+                    <div id="pie_chart2" style="width:450px; height:250px;">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
 
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="footer-about">
-                        <h2>About Us</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu lectus a leo tristique dictum nec non quam. Suspendisse convallis, tortor eu placerat rhoncus, lorem quam iaculis felis, sed eleifend lacus neque id eros. Integer convallis volutpat neque
-                        </p>
+<div class="service">
+    <div class="container">
+        <div class="row">
+            @foreach($caffe as $kafe)
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item">
+                    <div class="service-icon service-img d-flex justify-content-center">
+                        <img src="{{asset('assets/img/bgi.png')}}"></img>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-8">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Bento Kopi</a>
-                                <a href="">NUansa Kopi</a>
-                                <a href="">Easy Breezy</a>
-                                <a href="">Education Law</a>
-                                <a href="">Immigration Law</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Practices</a>
-                                <a href="">Attorneys</a>
-                                <a href="">Case Studies</a>
-                                <a href="">FAQs</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="footer-contact">
-                                <h2>Get In Touch</h2>
-                                <p><i class="fa fa-map-marker-alt"></i><a href="https://goo.gl/maps/6edT9xCVWra5Q4bb7">Sentrum Space. Jl. S. Hartono Jl. Kaliurang Timur No.KM 10, Gondangan, Sardonoharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta</a></p>
-                                <p><i class="fa fa-phone-alt"></i>+628</p>
-                                <p><i class="fa fa-envelope"></i>info@bentokopi.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>{{$kafe->group_caffe}}</h3>
+                    <p>
+                        {{$kafe->jumlah_karyawa}}
+                    </p>
+                    <a class="btn" id="detail" name="detail" href="detailrekrut/{{$kafe->group_caffe}}">Detail Caffe</a>
                 </div>
             </div>
-        </div>
-        <center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15814.442879205526!2d110.4018482!3d-7.7248477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb93133ac1166d07c!2sSentrum%20Space!5e0!3m2!1sid!2sid!4v1671466824319!5m2!1sid!2sid" width="800" height="200" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
-        <div class="container footer-menu">
-            <div class="f-menu">
-                <a href="">Terms of use</a>
-                <a href="">Privacy policy</a>
-                <a href="">Cookies</a>
-                <a href="">Help</a>
-                <a href="">FQAs</a>
-            </div>
+            @endforeach
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Service End -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        var caffe = <?php echo json_encode($jumlahc); ?>;
+        var options = {
+            chart: {
+                renderTo: 'pie_chart',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Persentase Caffe berdasarkan Group'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                percentageDecimals: 1
 
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    </div>
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        formatter: function() {
+                            return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(0) + ' %';
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Jumlah Cabang'
+            }]
+        }
+        myarray = [];
+        $.each(caffe, function(index, val) {
+            myarray[index] = [val.group_caffe, val.count];
+        });
+        options.series[0].data = myarray;
+        chart = new Highcharts.Chart(options);
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('assets/lib/easing/easing.min.js')}}"></script>
-    <script src="{{asset('assets/lib/owlcarousel/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('assets/lib/isotope/isotope.pkgd.min.js')}}"></script>
+    });
+    $(document).ready(function() {
+        var provinsi = <?php echo json_encode($provinsi); ?>;
+        var options = {
+            chart: {
+                renderTo: 'pie_chart2',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Persentase Lokasi Caffe'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+                percentageDecimals: 1
 
-    <!-- Template Javascript -->
-    <script src="{{asset('assets/js/main.js')}}"></script>
-</body>
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        formatter: function() {
+                            return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(0) + ' %';
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Lokasi Caffe'
+            }]
+        }
+        myarray = [];
+        $.each(provinsi, function(index, val) {
+            myarray[index] = [val.provinsi, val.total1];
+        });
+        options.series[0].data = myarray;
+        chart = new Highcharts.Chart(options);
 
-</html>
+    });
+</script>
+
+@endsection

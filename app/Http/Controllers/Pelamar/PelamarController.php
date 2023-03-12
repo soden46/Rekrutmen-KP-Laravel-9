@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Pelamar;
 
 use App\Http\Controllers\Controller;
-use App\Models\DataPelamar;
 use App\Models\Pelamar;
 use App\Models\Lamaran;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,26 +16,21 @@ class PelamarController extends Controller
 	}
 	public function lamar()
 	{
-		$pelamar = Pelamar::where('id_pelamar', Auth::user()->id_pelamar)->get();
+		$pelamar = Pelamar::where('id_user',Auth::user()->id)->value('id_pelamar');
 		return view('pelamar.lamaran', compact('pelamar'));
 	}
 
 	public function store(Request $request)
 	{
-		$pelamar = $request->id_pelamar;
 		$ValidatedData = $request->validate([
-			'id_pelamar' => 'required',
-			'nama' => ['required', 'max:255',],
-			'email' => 'required|email:dns',
-			'foto' => 'required|mimes:jpg,jpeg,png|max:5048',
-			'cv' => 'required|mimes:pdf,PDF|max:2048',
-			'surat_lamaran' => 'required|mimes:pdf,PDF|max:2048'
+            'id_pelamar' => ['required'],
+            'nama_caffe' => ['required', 'max:255'],
+			'alamat_caffe' => ['required','min:6'],
+			'foto' => ['required','mimes:jpg,jpeg,png','max:5048'],
+			'cv' => ['required','mimes:pdf,PDF','max:2048'],
+			'surat_lamaran' => ['required','mimes:pdf,PDF','max:2048']
 		]);
-		$ValidatedDataCaffe = $request->validate([
-			'nama_caffe' => ['required', 'max:255',],
-			'alamat_caffe' => 'required|min:6|',
-		]);
-		// dd($ValidatedData);
+		
 		if ($request->file('foto')) {
 			$ValidatedData['foto'] = $request->file('foto')->store('lamaran-foto');
 		}
@@ -49,18 +42,15 @@ class PelamarController extends Controller
 		}
 
 		Lamaran::create($ValidatedData);
-		$nama_caffe = $request->nama_caffe;
-		$alamat_caffe = $request->alamat_caffe;
-		User::where('id_pelamar', '=', $pelamar)
-			->update($ValidatedDataCaffe);
 		return redirect()->back()
-			->with('success', 'Lamaran Anda Berhasil Disimpan dan Menunggu Tindaklanjut');
+			->with('success', 'Lamaran Anda Berhasil Disimpan dan Menunggu Ditindaklanjuti');
+
 	}
 
 	public function status()
 	{
 		//get posts
-		$lamaran = Lamaran::where('pelamar.id_pelamar', '=', Auth::user()->id_pelamar)->join('pelamar', 'lamaran.id_pelamar', '=', 'pelamar.id_pelamar')
+		$lamaran = Lamaran::where('pelamar.id_user', '=', Auth::user()->id)->join('pelamar', 'lamaran.id_pelamar', '=', 'pelamar.id_pelamar')
 			->get(['lamaran.*', 'pelamar.*']);
 		//render view with posts
 		return view('pelamar.status', compact('lamaran'));
