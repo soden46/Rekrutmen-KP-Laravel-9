@@ -15,14 +15,16 @@
         <th style="width: 90px">Id Caffe</th>
         <th style="width: 90px">Nama Caffe</th>
         <th style="width: 200px">Alamat Caffe</th>
-        <th style="width: 200px">Nama Pelamar</th>
+        <th style="width: 200px">Provinsi</th>
+        <th style="width: 200px">Jumlah Pegawai</th>
     </tr>
     @foreach ($laporancaffe as $laporancafe)
     <tr>
         <td style="width: 25px">{{ $laporancafe->id_caffe }}</td>
         <td style="width: 25px">{{ $laporancafe->nama_caffe }}</td>
         <td style="width: 25px">{{ $laporancafe->alamat_caffe }}</td>
-        <td style="width: 25px">{{ $laporancafe->nama_pelamar }}</td>
+        <td style="width: 25px">{{ $laporancafe->provinsi }}</td>
+        <td style="width: 25px">{{ $laporancafe->jumlah_pegawai }}</td>
     </tr>
 
     @endforeach

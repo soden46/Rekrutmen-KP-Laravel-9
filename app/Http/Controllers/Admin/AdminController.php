@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Lamaran;
+use App\Models\Pelamar;
+use App\Models\News;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Caffe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -56,7 +59,11 @@ class AdminController extends Controller
     
     public function rekrutmen()
     {
-        $lamaran = Lamaran::first()->paginate(5);
+        
+        $lamaran = DB::table('lamaran as l')
+                ->select('l.*','p.*')
+                ->join('pelamar as p','l.id_pelamar','=','p.id_pelamar' )
+                ->get();
         return view('admin.lamaran', compact('lamaran'));
     }
     
@@ -90,6 +97,23 @@ class AdminController extends Controller
         $lamaran = Lamaran::find($id_lamaran);
         $lamaran->status_lamaran = "Lamaran Ditolak"; //Approved
         $lamaran->save();
+        return redirect()->back(); //Redirect user somewhere
+    }
+    
+    public function buka($id_berita)
+    {
+        $berita = News::find($id_berita);
+        $berita->status_Lowongan = "Lowongan Tersedia"; //Approved
+        $berita->save();
+        return redirect()->back(); //Redirect user somewhere
+
+    }
+
+    public function tutup($id_berita)
+    {
+        $berita = News::find($id_berita);
+        $berita->status_Lowongan = "Lowongan Ditutup"; //Approved
+        $berita->save();
         return redirect()->back(); //Redirect user somewhere
     }
 }

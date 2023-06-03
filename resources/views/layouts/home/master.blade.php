@@ -7,22 +7,6 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Bento Group Indonesia" name="keywords">
         <meta content="Bento Group Indonesia merupakan gabungan dari beberapa perusahaan bergerak sebagai pengelola dari berbagai dana investasi dari para investor. Kami bergerak di bidang Real Estate hingga kafe & Co-working. Saat ini sudah banyak cabang usaha di bawah pengelolaan Bento Group Indonesia." name="description">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4569086114807351" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script>
-            //<![CDATA[
-            function downloadJSAtOnload() {
-                var e = document.createElement("script");
-                e.src = "https://cdn.jsdelivr.net/gh/Arlina-Design/view@master/clickonme.js", document.body.appendChild(e)
-            }
-            window.addEventListener ? window.addEventListener("load", downloadJSAtOnload, !1) : window.attachEvent ? window.attachEvent("onload", downloadJSAtOnload) : window.onload = downloadJSAtOnload;
-            Arlina.init({
-                click: 3,
-                interval: 23000
-            });
-            //]]>
-        </script>
-
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-generic" href="/favicon.ico">
         <link rel="manifest" href="/site.webmanifest">
@@ -39,9 +23,6 @@
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
         <!-- Template Stylesheet -->
         <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-        <!--Chart-->
-        <script src="{{asset('assets/css/echarts.min.js')}}"></script>
-
     </head>
 
     <body>
@@ -81,8 +62,8 @@
                         <div class="footer-contact">
                             <h2>Get In Touch</h2>
                             <p><i class="fa fa-map-marker-alt"></i><a href="https://goo.gl/maps/6edT9xCVWra5Q4bb7">Sentrum Space. Jl. S. Hartono Jl. Kaliurang Timur No.KM 10, Gondangan, Sardonoharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta</a></p>
-                            <p><i class="fa fa-phone-alt"></i>+638</p>
-                            <p><i class="fa fa-envelope"></i>info@bentokopi.com</p>
+                            <p><i class="fa fa-phone-alt"></i>0813-2719-2837</p>
+                            <p><i class="fa fa-envelope"></i>info@bentogroupindonesia.com</p>
                             <div class="footer-social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
                                 <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -113,8 +94,6 @@
 
         <!-- Template Javascript -->
         <script src="{{asset('assets/js/main.js')}}"></script>
-        <script src="http://code.highcharts.com/highcharts.js"></script>
-        <script src="http://code.highcharts.com/modules/exporting.js"></script>
-    </body>
+</body>
 
-    </html>
+</html>

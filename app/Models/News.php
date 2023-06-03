@@ -11,13 +11,14 @@ class News extends Model
     use HasFactory, Sluggable;
     public $table = "berita";
     protected $fillable = [
+        'id_berita',
         'kategori',
         'judul',
         'slug',
         'foto',
         'kutipan',
         'isi',
-        'published_at'
+        'status_lowongan'
     ];
     public function sluggable(): array
     {
@@ -27,5 +28,5 @@ class News extends Model
             ]
         ];
     }
-    protected $primaryKey = 'id_news';
+    protected  $primaryKey = 'id_berita';
 }

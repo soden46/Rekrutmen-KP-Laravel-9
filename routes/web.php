@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\NewsAdminController;
 use App\Http\Controllers\Admin\TambahCaffeController;
 use App\Http\Controllers\LaporanPelamarController as ControllersLaporanPelamarController;
 use FontLib\Table\Type\name;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,15 +40,16 @@ Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
 });
 
-Route::get('/', [HomeController::class, 'index'])->middleware('guest');
+Route::get('', [HomeController::class, 'index'])->middleware('guest');
+Route::get('/home', [HomeController::class, 'index'])->middleware('guest');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
 
 Route::get('/recruitment', [HomeController::class, 'recruitment']);
-Route::get('/detailrekrut/{judul}',[HomeController::class, 'detail']);
-Route::get('/daftarberita',[NewsController::class, 'index']);
-Route::get('/berita/{judul}',[NewsController::class, 'detail']);
+Route::get('/detailrekrut/{judul}', [HomeController::class, 'detail']);
+Route::get('/daftarberita', [NewsController::class, 'index']);
+Route::get('/berita/{judul}', [NewsController::class, 'detail']);
 Route::get('/faq', function () {
     return view('home.faq');
 });
@@ -68,26 +70,29 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin
 //end admin
 
 //user
-// Route::get('/', [PelamarController::class, 'index'])->name('pelamar');
+Route::get('/dashboard', [PelamarController::class, 'index'])->name('pelamar');
 Route::get('/profil', [ProfileController::class, 'index'])->name('profil');
 Route::get('/biodata', [ProfileController::class, 'biodata'])->name('biodata');
 Route::post('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
 Route::post('/biodata', [ProfileController::class, 'save'])->name('biodata.save');
-Route::get('/lamaran', [PelamarController::class, 'lamar'])->name('lamaran');
+Route::POST('/lamar', [PelamarController::class, 'lamar'])->name('lamar');
 Route::get('/status', [PelamarController::class, 'status'])->name('status');
-Route::post('/lamarpekerjaan/', [PelamarController::class, 'store'])->name('lamarpekerjaan');
+Route::post('/lamarpekerjaan', [PelamarController::class, 'store'])->name('lamarpekerjaan');
+Route::get('/pelamar/lowongan/', [PelamarController::class, 'lowongan'])->name('pelamar.lowongan');
 //end user
 
 //halaman news post admin
 Route::resource('/admin/news/', NewsAdminController::class)->middleware(['can:admin']);
-Route::post('/admin/news/store', [NewsAdminController::class,'store'])->middleware(['can:admin']);
-Route::get('/admin/news/CheckSlug', [NewsAdminController::class,'CheckSlug'])->middleware(['can:admin']);
+Route::post('/admin/news/store', [NewsAdminController::class, 'store'])->middleware(['can:admin']);
+Route::get('/admin/news/CheckSlug', [NewsAdminController::class, 'CheckSlug'])->middleware(['can:admin']);
 
 //tombol approval
 Route::post('/terima/{id_lamaran}', [AdminController::class, 'terima'])->name('admin.terima')->middleware(['can:admin']);
 Route::post('/tolak/{id_lamaran}', [AdminController::class, 'tolak'])->name('admin.tolak')->middleware(['can:admin']);
 Route::post('/angkat/{id_lamaran}', [LaporanPenerimaanController::class, 'angkat'])->name('admin.angkat')->middleware(['can:admin']);
 Route::post('/hapus/{id_lamaran}', [LaporanPenerimaanController::class, 'hapus'])->name('admin.hapus')->middleware(['can:admin']);
+Route::post('/buka/{id_berita}', [AdminController::class, 'buka'])->name('admin.buka')->middleware(['can:admin']);
+Route::post('/tutup/{id_berita}', [AdminController::class, 'tutup'])->name('admin.tutup')->middleware(['can:admin']);
 
 //tombol edit & hapus caffe Admin
 Route::get('/admin/edit/{id_caffe}', [AdminController::class, 'edit'])->name('admin.edit')->middleware(['can:admin']);
@@ -100,9 +105,8 @@ Route::get('emailundangan', [EmailUndanganController::class, 'index'])->name('em
 Route::post('kirimemail', [EmailUndanganController::class, 'kirimemail'])->name('kirimemail')->middleware(['can:admin']);
 //
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-Route::get('/rekrutmen', [AdminController::class, 'rekrutmen'])->middleware(['can:admin']);
 
-Route::get('/rekrutmen', [AdminController::class, 'rekrutmen'])->middleware(['can:admin']);
+Route::get('rekrutment', [AdminController::class, 'rekrutmen'])->name('rekrutment')->middleware(['can:admin']);
 Route::get('/admin.lamaran', [AdminController::class, 'lamaran'])->middleware(['can:admin']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('guest');
 
@@ -128,7 +132,6 @@ Route::get('print', [LaporanCaffeController::class, 'cetakcaffe'])->name('print'
 Route::get('/lowongan', [LaporanLowonganController::class, 'datalowongan'])->middleware(['can:admin']);
 Route::get('cetaklowongan', [LaporanLowonganController::class, 'cetaklowongan'])->name('cetaklowongan')->middleware(['can:admin']);
 Route::get('cetakcaffe', [LaporanCaffeController::class, 'cetakcaffe'])->name('cetakcaffe')->middleware(['can:admin']);
-Route::get('caffepdf', [AdminController::class, 'cetakcaffe'])->name('cetakcaffe')->middleware(['can:admin']);
 
 //data karyawan
 Route::get('bento', [DataKaryawanController::class, 'bento'])->name('bento')->middleware(['can:admin']);

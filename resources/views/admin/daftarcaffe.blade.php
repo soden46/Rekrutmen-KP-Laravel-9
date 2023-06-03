@@ -9,7 +9,7 @@
     <p>{{ $message }}</p>
 </div>
 @endif
-<a class="btn btn-md btn-success mb-3" href="{{ url('caffepdf') }}"><i class="fa fa-print"></i> Cetak PDF</a>
+<a class="btn btn-md btn-success mb-3" href="{{ url('cetakcaffe') }}"><i class="fa fa-print"></i> Cetak PDF</a>
 <table class="table table-bordered">
     <tr>
         <th>No</th>

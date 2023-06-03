@@ -12,10 +12,11 @@ class DataPelamar extends Model
     protected $fillable = [
         'id_lamaran',
         'id_pelamar',
+        'nama_pelamar',
+        'email',
         'foto',
         'cv',
         'surat_lamaran',
-        'nama_pelamar',
-        'email',
+        'created_at'
     ];
 }

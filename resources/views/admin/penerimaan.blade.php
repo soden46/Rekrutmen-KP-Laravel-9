@@ -13,20 +13,23 @@
 <a class="btn btn-md btn-success mb-3 emailundangan" href="{{route('emailundangan')}}"><i class="fa fa-envelope" aria-hidden="true"></i> Kirim Email</a>
 <table class="table table-bordered">
     <tr>
-        <th>Id Lamaran</th>
-        <th>Id Pelamar</th>
         <th>Nama Pelamar</th>
-        <th>Status</th>
         <th>Email</th>
+        <th>Foto</th>
+        <th>CV</th>
+        <th>Surat Lamaran</th>
+        <th>Status</th>
         <th>Aksi</th>
     </tr>
     @foreach ($penerimaan as $terima)
     <tr>
-        <td>{{ $terima->id_lamaran }}</td>
-        <td>{{ $terima->id_pelamar }}</td>
         <td>{{ $terima->nama_pelamar }}</td>
-        <td>{{ $terima->status_lamaran='Lamaran Disetujui' }}</td>
         <td>{{ $terima->email }}</td>
+        <td><a href="{{asset('storage/'.$terima->foto)}}">Lihat Foto</td>
+        <td><a href="{{asset('storage/'.$terima->cv)}}">Lihat CV</td>
+        <td><a href="{{asset('storage/'.$terima->surat_lamaran)}}">Lihat Surat Lamaran</td>
+        <td>{{ $terima->status_lamaran='Lamaran Disetujui' }}</td>
+
         <td>
             <div class="btn-group">
                 <form method="POST" action="{{ route('admin.angkat',$terima->id_lamaran) }}">
@@ -36,7 +39,7 @@
                 </form>
                 <form method="POST" action="{{ route('admin.hapus',$terima->id_lamaran) }}">
                     @csrf
-                    <button type="submit" class="btn btn-secondary btn-sm">Hapus</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                 </form>
             </div>
         </td>

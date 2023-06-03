@@ -15,7 +15,7 @@ class LaporanLowonganController extends Controller
     public function datalowongan()
     {
         $lowongan = LowonganPekerjaan::paginate(5);
-
+        
         return view('admin.lowongan', compact('lowongan'));
     }
     public function cetaklowongan()

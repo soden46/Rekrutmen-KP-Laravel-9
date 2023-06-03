@@ -15,7 +15,7 @@
             <th>No</th>
             <th>Nama</th>
             <th>Email</th>
-            <th>Nama Caffe</th>
+            <th>Lowongan</th>
             <th>Alamat Caffe</th>
             <th>Foto</th>
             <th>CV</th>
@@ -27,11 +27,11 @@
             <td>{{ $lamar->id }}</td>
             <td>{{ $lamar->nama_pelamar }}</td>
             <td>{{ $lamar->email }}</td>
-            <td>{{ $lamar->nama_caffe }}</td>
+            <td>{{ $lamar->lowongan }}</td>
             <td>{{ $lamar->alamat_caffe }}</td>
-            <td><a href="{{asset('assets/storage/public/'.$lamar->foto)}}">Lihat Foto</td>
-            <td><a href="{{asset('assets/storage/public/'.$lamar->cv)}}">Lihat CV</td>
-            <td><a href="{{asset('assets/storage/public/'.$lamar->surat_lamaran)}}">Lihat Surat Lamaran</td>
+            <td><a href="{{asset('storage/'.$lamar->foto)}}">Lihat Foto</td>
+            <td><a href="{{asset('storage/'.$lamar->cv)}}">Lihat CV</td>
+            <td><a href="{{asset('storage/'.$lamar->surat_lamaran)}}">Lihat Surat Lamaran</td>
             <td>{{ $lamar->status_lamaran }}</td>
         </tr>
         @endforeach

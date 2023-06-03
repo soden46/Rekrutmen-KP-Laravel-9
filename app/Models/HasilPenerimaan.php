@@ -13,8 +13,11 @@ class HasilPenerimaan extends Model
         'id_lamaran',
         'id_pelamar',
         'nama_pelamar',
-        'status_lamaran',
         'email',
+        'foto',
+        'cv',
+        'surat_lamaran',
+        'status_lamaran',
     ];
     public $timestamps = false;
 }

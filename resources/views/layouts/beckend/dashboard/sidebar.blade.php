@@ -42,7 +42,7 @@
             </li>
     <!-- Nav Item -->
     <li class="nav-item">
-        <a class="nav-link" href="{{url('/rekrutmen')}}">
+        <a class="nav-link" href="{{url('/rekrutment')}}">
             <i class="fa fa-handshake-o"></i>
             <span>Rekrutmen</span>
         </a>
@@ -101,14 +101,14 @@
     <!-- Nav Item -->
     <li class="nav-item">
         <a class="nav-link" href="/biodata">
-            <i class="fa fa-info-circle"></i>
+            <i class="fa fa-light fa-user-pen"></i>
             <span>Biodata</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/lamaran">
-            <i class="fa fa-upload"></i>
-            <span>Lamar Pekerjaan</span>
+        <a class="nav-link" href="/pelamar/lowongan">
+            <i class="fa fa-light fa-newspaper"></i>
+            <span>Lowongan</span>
         </a>
     </li>
     <li class="nav-item">

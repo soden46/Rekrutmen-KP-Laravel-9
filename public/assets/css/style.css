@@ -1,6 +1,31 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
 body {
     color: #090909;
     background: #ffffff;
@@ -161,7 +186,7 @@ a:focus {
 
     .nav-bar,
     .nav-bar .navbar {
-        background: #fafafb !important;
+        background: #FAD02C !important;
     }
 
     .nav-bar .navbar-brand {
@@ -180,7 +205,7 @@ a:focus {
     .nav-bar,
     .nav-bar .navbar {
         padding: 3px 0;
-        background: #fafafa !important;
+        background: #FAD02C !important;
     }
 
     .nav-bar a.nav-link {
@@ -402,31 +427,7 @@ a:focus {
     z-index: 1;
 }
 
-.section-header h2::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 7px;
-    left: 0;
-    top: 21px;
-    background: transparent;
-    border-top: 1px solid #090909;
-    border-bottom: 1px solid #070707;
-    z-index: -1;
-}
 
-.section-header h2::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 7px;
-    left: 0;
-    bottom: 20px;
-    background: transparent;
-    border-top: 1px solid #fcfefd;
-    border-bottom: 1px solid #fdfffe;
-    z-index: -1;
-}
 
 @media (max-width: 767.98px) {
     .section-header h2 {
@@ -1093,7 +1094,10 @@ a:focus {
     color: #fbfaf9;
     border: 2px solid #fbfbfa;
 }
-
+.contact a {
+    color: #999999;
+    transition: .3s;
+}
 .contact .contact-text {
     position: relative;
     width: auto;
@@ -1363,7 +1367,7 @@ a:focus {
     position: relative;
     width: 100%;
     text-align: center;
-    background: #121518;
+    background: #080808;
     margin-bottom: 30px;
 }
 
@@ -1373,7 +1377,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000000;
+    background: #080808;
 }
 
 .service .service-icon i {

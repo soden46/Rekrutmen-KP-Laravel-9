@@ -20,15 +20,19 @@ class NewsAdminController extends Controller
         $validatedData = $request->validate([
             'judul_artikel'     => 'required|max:255',
             'kategori'  => 'required',
-            'isi'       => 'required'
+            'isi'       => 'required',
+            'foto' => ['required','mimes:jpg,jpeg,png','max:5048']
         ]);
+        if ($request->file('foto')) {
+			$ValidatedData['foto'] = $request->file('foto')->store('news');
+		}
         $kutipan = 
         $slug = SlugService::createSlug(News::class, 'slug', $request->judul_artikel);
         News::create([
             'kategori' => $request->kategori,
             'judul' => $request->judul_artikel,
             'slug' => $request->slug,
-            'foto' => null,
+            'foto' => $ValidatedData['foto'],
             'kutipan' => Str::limit(strip_tags($request->isi), 150),
             'isi' => $request->isi
             

@@ -10,9 +10,13 @@ class LowonganPekerjaan extends Model
     use HasFactory;
     public $table = "laporan_lowongan_pekerjaan";
     protected $fillable = [
-        'id_lowongan',
-        'nama_jabatan',
-        'nama_caffe',
+        'id_lamaran',
+        'id_berita',
+        'kategori',
+        'judul',
+        'penempatan',
         'alamat_caffe',
+        'status_lowongan',
+        'created_at'
     ];
 }

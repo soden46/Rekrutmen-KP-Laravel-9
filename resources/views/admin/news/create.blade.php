@@ -4,7 +4,7 @@
 ])
 @section('content')
 <div class="col-lg-8">
-<form method="post" action="{{url('/admin/news/store')}}">
+<form method="post" action="{{url('/admin/news/store')}}" enctype="multipart/form-data">
     @csrf
   <div class="form-group">
     <label for="judul_artikel" >Judul</label>
@@ -25,6 +25,10 @@
       <option>Berita</option>
       <option>Lowongan Kerja</option>
     </select>
+  </div>
+  <div class="form-group">
+    <label for="foto" >Foto</label>
+    <input type="file" class="form-control " id="foto" name="foto">
   </div>
   <div class="form-group">
   <input id="isi" type="hidden" name="isi" >

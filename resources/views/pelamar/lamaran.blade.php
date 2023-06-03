@@ -12,8 +12,13 @@
     <marquee>Silahkan Isi Biodat Anda Terlebih Dahulu Pada Menu Biodata Sebelum Mengajukan Lamaran </marquee>
     <form action="/lamarpekerjaan " method="POST" enctype="multipart/form-data">
         @csrf
+        @method('POST')
         <div class="form-floating">
             <input type="text" name="id_pelamar" class="form-control" id="floatingInput" value="{{$pelamar}}" hidden>
+        </div>
+        <div class="form-floating">
+            <label for="floatingInput">Lowongan</label>
+            <input type="text" name="lowongan" class="form-control" id="lowongan" value="{{$berita}}" readonly>
         </div>
         <div class="form-floating">
             <label for="floatingInput">Nama</label>
@@ -33,16 +38,6 @@
             </div>
             @enderror
         </div>
-        <div class="form-floating">
-            <label for="floatingInput">Nama Caffe</label>
-            <input type="text" name="nama_caffe" class="form-control @error('nama_caffe')is-invalid @enderror" id="floatingInput" placeholder="bentokopi gejayan" required value="{{old('nama_caffe')}}">
-            @error('nama_caffe')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
-        </div>
-        <a href="">Klik Text Ini Untuk Melihat Daftar Caffe</a>
         <div class="form-floating">
             <label for="floatingInput">Alamat Caffe</label>
             <input type="text" name="alamat_caffe" class="form-control @error('alamat_caffe')is-invalid @enderror" id="floatingInput" placeholder="jl.gejayan..." required value="{{old('alamat_caffe')}}">
