@@ -23,14 +23,14 @@
     <link href="{{ asset('assets/template/backend/sb-admin-2/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <!--Trix Editor CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/trix.css')}}">
-    
+
     <style type="text/css">
-        trix-toolbar [data-trix-button-group="file-tools"]{
+        trix-toolbar [data-trix-button-group="file-tools"] {
             dysplay: none;
         }
     </style>
     @stack('css')
-        
+
 </head>
 
 <body id="page-top">
@@ -59,7 +59,6 @@
                     @yield('content')
                 </div>
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
 
@@ -106,16 +105,22 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    
-<!--template-->
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery/jquery.min.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('assets/template/backend/sb-admin-2/js/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/demo/chart-area-demo.js"></script>
+    <script src="{{ asset('assets/template/backend/sb-admin-2') }}/js/demo/chart-pie-demo.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js/trix.js')}}"></script>
     <script type="text/javascript">
         $.ajaxSetup({
             headers: {
@@ -123,10 +128,6 @@
             }
         });
     </script>
-    
-    <!--Trix Editor JS-->
-    <!--Trix Editor JS-->
-<script type="text/javascript" src="{{asset('assets/js/trix.js')}}"></script>
     @stack('js')
 </body>
 

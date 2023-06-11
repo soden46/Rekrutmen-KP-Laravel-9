@@ -14,6 +14,7 @@ class News extends Model
         'id_berita',
         'kategori',
         'judul',
+        'penempatan',
         'slug',
         'foto',
         'kutipan',

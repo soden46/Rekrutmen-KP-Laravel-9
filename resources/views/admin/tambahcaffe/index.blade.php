@@ -34,7 +34,7 @@
             </div>
             @enderror
         </div>
-         <div class="form-floating">
+        <div class="form-floating">
             <label for="floatingInput">Provinsi</label>
             <input type="text" name="provinsi" class="form-control @error('provinsi')is-invalid @enderror" id="floatingInput" placeholder="Contoh: Jawa Tengah" required value="{{old('provinsi')}}">
             @error('provinsi')

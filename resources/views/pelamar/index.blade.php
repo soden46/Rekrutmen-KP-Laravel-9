@@ -1,77 +1,35 @@
 @extends('dashboard',[
-'title' => 'Pelamar',
-'pageTitle' => 'Dashboard',
+'title' => 'Dashboard Pelamar',
+'pageTitle' => 'Dashboard Pelamar'
 ])
 @section('content')
-<div class="h-50 d-inline-block" style="max-width: 75%">
-  @include('component.alert-dismissible')
-  <form action="/lamarpekerjaan " method="POST" enctype="multipart/form-data">
-    @csrf
-    <div class="form-floating">
-      <label for="floatingInput">Nama</label>
-      <input type="text" name="nama" class="form-control @error('nama')is-invalid @enderror" id="floatingInput" placeholder="Nama Lengkap" required value="{{old('nama')}}">
-      @error('nama')
-      <div class="invalid-feedback">
-        {{$message}}
-      </div>
-      @enderror
+<div class="row">
+  <div class="card text-white bg-info col-sm-4">
+    <div class="card-body">
+      <h5 class="card-title">Jumlah Lowongan</h5>
+      <h2 class="card-text">
+        <i class="fa fa-clipboard-list"> {{$lowongan}}</i>
+      </h2><br>
+      <a href="/pelamar/lowongan" class="btn btn-primary">Lihat Lowongan</a>
     </div>
-    <div class="form-floating">
-      <label for="floatingInput">Email</label>
-      <input type="email" name="email" class="form-control @error('email')is-invalid @enderror" id="floatingInput" placeholder="bentokopi@gmail.com" required value="{{old('email')}}">
-      @error('email')
-      <div class="invalid-feedback">
-        {{$message}}
-      </div>
-      @enderror
+  </div>
+  <div class="card text-white bg-warning col-sm-4">
+    <div class="card-body">
+      <h5 class="card-title">Isi Biodata</h5>
+      <p class="card-text">
+        Isi biodata anda dengan cara mengeklik menu biodata sebelum mengajukan lamaran melaluli halaman lowongan
+      <p>
     </div>
-    <div class="form-floating">
-      <label for="floatingInput">Nama Caffe</label>
-      <input type="text" name="nama_caffe" class="form-control @error('nama_caffe')is-invalid @enderror" id="floatingInput" placeholder="bentokopi gejayan" required value="{{old('nama_caffe')}}">
-      @error('nama_caffe')
-      <div class="invalid-feedback">
-        {{$message}}
-      </div>
-      @enderror
+  </div>
+  <div class="card text-white bg-info col-sm-4">
+    <div class="card-body">
+      <h5 class="card-title">Cara Mengajukan Lamaran</h5>
+      <p class="card-text">
+        1. Klik menu lowongan<br>
+        2. Klik Lihat Lowongan Pada tombol list lowongan<br>
+        3. Klik tombol lamar pada halaman detail
+      </p>
     </div>
-    <a href="">Klik Text Ini Untuk Melihat Daftar Caffe</a>
-    <div class="form-floating">
-      <label for="floatingInput">Alamat Caffe</label>
-      <input type="text" name="alamat_caffe" class="form-control @error('alamat_caffe')is-invalid @enderror" id="floatingInput" placeholder="jl.gejayan..." required value="{{old('alamat_caffe')}}">
-      @error('alamat_caffe')
-      <div class="invalid-feedback">
-        {{$message}}
-      </div>
-      @enderror
-    </div>
-    <div class="form-floating">
-      <label for="foto" class="form-label">Foto Diri</label>
-      <input class="form-control @error('foto')is-invalid @enderror" type="file" id="foto" name="foto">
-      @error('foto')
-      <div class="invalid-feedback">
-        {{$message}}
-      </div>
-      @enderror
-    </div>
-    <div class="form-floating">
-      <label for="cv" class="form-label">CV</label>
-      <input class="form-control @error('cv')is-invalid @enderror" type="file" id="cv" name="cv">
-      @error('cv')
-      <div class="invalid-feedback">
-        {{$message}}
-      </div>
-      @enderror
-    </div>
-    <div class="form-floating">
-      <label for="surat_lamaran" class="form-label">Surat Lamaran</label>
-      <input class="form-control @error('surat_lamaran')is-invalid @enderror" type="file" id="surat_lamaran" name="surat_lamaran">
-      @error('surat_lamaran')
-      <div class="invalid-feedback">
-        {{$message}}
-      </div>
-      @enderror
-    </div>
-    <button class="btn btn-primary mt-12" type="submit">Simpan</button>
-  </form>
+  </div>
 </div>
 @endsection

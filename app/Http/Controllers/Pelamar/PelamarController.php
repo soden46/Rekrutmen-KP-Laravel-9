@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Pelamar;
 use App\Models\Lamaran;
 use App\Models\News;
+use App\Models\Caffe;
+use App\Models\LowonganPekerjaan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,21 +15,26 @@ class PelamarController extends Controller
 {
 	public function index()
 	{
-		return view('pelamar.index');
+		$caffe = Caffe::get()->count();
+		$pelamar = Pelamar::get()->count();
+		$lamaran = Lamaran::get()->count();
+		$lowongan = LowonganPekerjaan::get()->count();
+		return view('pelamar.index', compact('caffe', 'pelamar', 'lamaran', 'lowongan'));
 	}
 	public function lamar(Request $request)
 	{
 		$pelamar = Pelamar::where('id_user', Auth::user()->id)->value('id_pelamar');
 		$berita = News::where('id_berita', '=', $request->id)->value('judul');
-		return view('pelamar.lamaran', compact('berita', 'pelamar'));
+		$id_berita = $request->id;
+		return view('pelamar.lamaran', compact('berita', 'pelamar', 'id_berita'));
 	}
 
 	public function store(Request $request)
 	{
-
 		$ValidatedData = $request->validate([
-			'id_pelamar' => ['required'],
-			'lowongan' => ['required'],
+			'id_pelamar' => ['required', 'max:255'],
+			'id_berita' => ['required', 'max:255'],
+			'lowongan' => ['required', 'max:255'],
 			'alamat_caffe' => ['required', 'min:6'],
 			'foto' => ['required', 'mimes:jpg,jpeg,png', 'max:5048'],
 			'cv' => ['required', 'mimes:pdf,PDF', 'max:2048'],

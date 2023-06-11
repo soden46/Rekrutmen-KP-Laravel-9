@@ -10,6 +10,7 @@ class Caffe extends Model
     public $table = "caffe";
     protected $fillable = [
         'id_caffe',
+        'id_hrd',
         'group_caffe',
         'nama_caffe',
         'provinsi',

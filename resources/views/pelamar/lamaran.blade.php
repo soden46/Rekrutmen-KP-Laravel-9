@@ -12,9 +12,11 @@
     <marquee>Silahkan Isi Biodat Anda Terlebih Dahulu Pada Menu Biodata Sebelum Mengajukan Lamaran </marquee>
     <form action="/lamarpekerjaan " method="POST" enctype="multipart/form-data">
         @csrf
-        @method('POST')
         <div class="form-floating">
             <input type="text" name="id_pelamar" class="form-control" id="floatingInput" value="{{$pelamar}}" hidden>
+        </div>
+        <div class="form-floating">
+            <input type="text" name="id_berita" class="form-control" id="id_berita" value="{{$id_berita}}" hidden>
         </div>
         <div class="form-floating">
             <label for="floatingInput">Lowongan</label>

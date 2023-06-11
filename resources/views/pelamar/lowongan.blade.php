@@ -3,6 +3,11 @@
 'pageTitle' => 'Lowongan Pekerjaan',
 ])
 @section('content')
+@if ($message = Session::get('success'))
+<div class="alert alert-success">
+    <p>{{ $message }}</p>
+</div>
+@endif
 <div class="row">
     @foreach($news as $berita)
     <div class="col-sm-6">
@@ -32,9 +37,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <form action="/lamar" method="POST">
+                    <form action="/pelamar/lamar" method="GET">
                         @csrf
-                        @method('POST')
                         <div class="form-floating">
                             <input type="text" name="id" class="form-control" id="id" value="{{$berita->id_berita}}" hidden>
                         </div>

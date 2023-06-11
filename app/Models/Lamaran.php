@@ -12,6 +12,7 @@ class Lamaran extends Model
     protected $fillable = [
         'id_lamaran',
         'id_pelamar',
+        'id_berita',
         'lowongan',
         'alamat_caffe',
         'foto',

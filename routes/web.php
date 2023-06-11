@@ -75,7 +75,7 @@ Route::get('/profil', [ProfileController::class, 'index'])->name('profil');
 Route::get('/biodata', [ProfileController::class, 'biodata'])->name('biodata');
 Route::post('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
 Route::post('/biodata', [ProfileController::class, 'save'])->name('biodata.save');
-Route::POST('/lamar', [PelamarController::class, 'lamar'])->name('lamar');
+Route::get('/pelamar/lamar', [PelamarController::class, 'lamar']);
 Route::get('/status', [PelamarController::class, 'status'])->name('status');
 Route::post('/lamarpekerjaan', [PelamarController::class, 'store'])->name('lamarpekerjaan');
 Route::get('/pelamar/lowongan/', [PelamarController::class, 'lowongan'])->name('pelamar.lowongan');
@@ -85,6 +85,8 @@ Route::get('/pelamar/lowongan/', [PelamarController::class, 'lowongan'])->name('
 Route::resource('/admin/news/', NewsAdminController::class)->middleware(['can:admin']);
 Route::post('/admin/news/store', [NewsAdminController::class, 'store'])->middleware(['can:admin']);
 Route::get('/admin/news/CheckSlug', [NewsAdminController::class, 'CheckSlug'])->middleware(['can:admin']);
+
+Route::get('/admin/hrd', [AdminController::class, 'hrd'])->middleware(['can:admin']);
 
 //tombol approval
 Route::post('/terima/{id_lamaran}', [AdminController::class, 'terima'])->name('admin.terima')->middleware(['can:admin']);

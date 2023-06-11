@@ -13,7 +13,7 @@ class LoginController extends Controller
     // {
     //     $this->middleware(['auth','verified']);
     // }
-    
+
     public function index()
     {
         return view('login.index', [
