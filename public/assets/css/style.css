@@ -1,35 +1,31 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
-.map-responsive{
+.map-responsive {
+    overflow: hidden;
 
-    overflow:hidden;
+    padding-bottom: 56.25%;
 
-    padding-bottom:56.25%;
+    position: relative;
 
-    position:relative;
-
-    height:0;
-
+    height: 0;
 }
 
-.map-responsive iframe{
+.map-responsive iframe {
+    left: 0;
 
-    left:0;
+    top: 0;
 
-    top:0;
+    height: 100%;
 
-    height:100%;
+    width: 100%;
 
-    width:100%;
-
-    position:absolute;
-
+    position: absolute;
 }
 body {
     color: #090909;
     background: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
 
@@ -39,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-style: normal;
     color: #121518;
@@ -47,7 +43,7 @@ h6 {
 
 a {
     color: #121518;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 a:hover,
@@ -95,7 +91,6 @@ a:focus {
     padding-top: 10px;
 }
 
-
 /**********************************/
 /********** Top Bar CSS ***********/
 /**********************************/
@@ -108,8 +103,6 @@ a:focus {
     margin-top: -6px;
 }
 
-
-
 @media (max-width: 30px) {
     .logo {
         text-align: center;
@@ -120,6 +113,12 @@ a:focus {
     }
 }
 
+/**********************************/
+/*********** HEADER **********/
+/**********************************/
+.hero-header .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--secondary);
+}
 
 /**********************************/
 /*********** Nav Bar CSS **********/
@@ -127,7 +126,11 @@ a:focus {
 .nav-bar {
     position: relative;
     padding: 20px 0;
-    transition: .3s;
+    transition: 0.3s;
+}
+
+.logo-text {
+    margin-right: 30px; /* Sesuaikan nilai sesuai kebutuhan */
 }
 
 .nav-bar.nav-sticky {
@@ -149,12 +152,12 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
-    color: #0c0c0c;
+    color: #fefcfc;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #fab43c;
+    color: #0bfb03;
     transition: none;
 }
 
@@ -162,7 +165,7 @@ a:focus {
     margin-top: 0;
     border: 0;
     border-radius: 0;
-    background: #0a0a0a;
+    background: #faf9f9;
 }
 
 .nav-bar .btn {
@@ -172,7 +175,7 @@ a:focus {
 }
 
 .nav-bar .btn:hover {
-    background: #fab43c;
+    background: #04fd26;
 }
 
 @media (min-width: 992px) {
@@ -186,7 +189,7 @@ a:focus {
 
     .nav-bar,
     .nav-bar .navbar {
-        background: #FAD02C !important;
+        background: #039342 !important;
     }
 
     .nav-bar .navbar-brand {
@@ -201,11 +204,10 @@ a:focus {
 }
 
 @media (max-width: 991.98px) {
-
     .nav-bar,
     .nav-bar .navbar {
         padding: 3px 0;
-        background: #FAD02C !important;
+        background: #039342 !important;
     }
 
     .nav-bar a.nav-link {
@@ -253,7 +255,7 @@ a:focus {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
@@ -270,7 +272,7 @@ a:focus {
 
 .carousel .carousel-caption h1 {
     color: #ffffff;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -291,7 +293,7 @@ a:focus {
     background: #f4f4f5;
     border: 2px solid #fbfcfd;
     border-radius: 0;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .carousel .carousel-caption .btn:hover {
@@ -339,7 +341,6 @@ a:focus {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
 }
-
 
 /*******************************/
 /******* Page Header CSS *******/
@@ -407,7 +408,6 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /******* Section Header ********/
 /*******************************/
@@ -426,8 +426,6 @@ a:focus {
     white-space: nowrap;
     z-index: 1;
 }
-
-
 
 @media (max-width: 767.98px) {
     .section-header h2 {
@@ -470,7 +468,7 @@ a:focus {
     border: 2px solid #050505;
     border-radius: 0;
     background: #f9fafa;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .about .about-text a.btn:hover {
@@ -488,112 +486,42 @@ a:focus {
 /*******************************/
 /*********** FAQs CSS **********/
 /*******************************/
-.faqs {
-    position: center;
-    width: 100%;
-    padding: 45px 0;
+.faqs .content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antara gambar dan teks */
 }
 
-.faqs {
-    position: relative;
-    height: 7s00px;
-    padding: 10px;
-    background: #fdfcfc;
+.faqs .faq-img {
+    max-width: 400px; /* Sesuaikan ukuran gambar */
+    border-radius: 5px;
 }
 
-@media(max-width: 767.98px) {
-    .faqs {
-        margin-bottom: 30px;
-        height: auto;
+.faqs .text-content {
+    flex: 1;
+}
+
+.faqs .text-content h1 {
+    font-size: 24px;
+    color: #02711f;
+    margin-bottom: 10px;
+}
+
+.faqs .text-content p {
+    margin: 5px 0;
+}
+
+@media (max-width: 767.98px) {
+    .faqs .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .faqs .faq-img {
+        margin-bottom: 15px;
+        max-width: 100%; /* Gambar memenuhi lebar layar */
     }
 }
-
-.faqs .card {
-    margin-bottom: 15px;
-    padding-top: 15px;
-    border: #02711f;
-    border-radius: 0;
-    border-top: 1px solid #02711f;
-}
-
-.faqs .card:last-child {
-    margin-bottom: 0;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #02711f;
-}
-
-.faqs .card-header {
-    padding: 0;
-    border: none;
-    background: #ffffff;
-}
-
-.faqs .card-header a {
-    display: block;
-    width: 100%;
-    color: #121518;
-    font-size: 18px;
-    line-height: 40px;
-}
-
-.faqs .card-header a span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    text-align: center;
-    background: #121518;
-    color: #fbfcfb;
-    font-weight: 700;
-}
-
-.faqs .card-header [data-toggle="collapse"]:after {
-    font-family: 'Roboto', sans-serif;
-    content: "\f067";
-    float: right;
-    color: #121518;
-    font-size: 12px;
-    font-weight: 900;
-    transition: .3s;
-}
-
-.faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
-    font-family: 'Roboto', sans-serif;
-    content: "\f068";
-    float: right;
-    color: #121518;
-    font-size: 12px;
-    font-weight: 900;
-    transition: .3s;
-}
-
-.faqs .card-body {
-    padding: 15px 0 0 0;
-    font-size: 16px;
-    border: none;
-    background: #ffffff;
-}
-
-.faqs a.btn {
-    position: relative;
-    margin-top: 15px;
-    padding: 15px 35px;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fefefe;
-    border: 2px solid #fcfcfb;
-    border-radius: 0;
-    background: #121518;
-    transition: .3s;
-}
-
-.faqs a.btn:hover {
-    color: #fab43c;
-    background: #f9f8f6;
-}
-
 
 /*******************************/
 /******* Testimonial CSS *******/
@@ -668,7 +596,6 @@ a:focus {
     background: #121518;
 }
 
-
 /*******************************/
 /*********** Blog CSS **********/
 /*******************************/
@@ -737,7 +664,7 @@ a:focus {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #fcfaf8;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .blog .blog-item a.btn i {
@@ -783,7 +710,6 @@ a:focus {
     color: #999999;
 }
 
-
 /*******************************/
 /********* Timeline CSS ********/
 /*******************************/
@@ -816,7 +742,7 @@ a:focus {
 }
 
 .timeline .timeline-container::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 15px;
     height: 5px;
@@ -835,7 +761,7 @@ a:focus {
 }
 
 .timeline .timeline-container::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 15px;
     height: 5px;
@@ -882,7 +808,7 @@ a:focus {
     padding: 5px 10px;
     color: #121518;
     background: #fdfdfc;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
 }
 
@@ -925,7 +851,6 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
@@ -956,7 +881,7 @@ a:focus {
     border-radius: 0;
     background: #121518;
     border: 2px solid #fdfdfb;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .portfolio #portfolio-flters li:hover,
@@ -972,7 +897,7 @@ a:focus {
 .portfolio .load-more .btn {
     padding: 15px 35px;
     font-size: 16px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .portfolio .load-more .btn:hover {
@@ -984,7 +909,7 @@ a:focus {
     position: relative;
     margin-bottom: 30px;
     overflow: hidden;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .portfolio .portfolio-item:hover {
@@ -1014,7 +939,11 @@ a:focus {
     align-items: flex-start;
     justify-content: flex-end;
     flex-direction: column;
-    background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .0), rgba(0, 0, 0, 1) 90%);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 90%
+    );
 }
 
 .portfolio figure p {
@@ -1036,12 +965,12 @@ a:focus {
 }
 
 .portfolio figure a {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #fffdfb;
     font-size: 25px;
     font-weight: 600;
     font-style: normal;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .portfolio figure a:hover {
@@ -1054,7 +983,6 @@ a:focus {
     color: #999999;
     font-size: 16px;
 }
-
 
 /*******************************/
 /********* Contact CSS *********/
@@ -1096,7 +1024,7 @@ a:focus {
 }
 .contact a {
     color: #999999;
-    transition: .3s;
+    transition: 0.3s;
 }
 .contact .contact-text {
     position: relative;
@@ -1149,14 +1077,13 @@ a:focus {
     background: #fafafb;
     border: 2px solid #fefefd;
     border-radius: 0;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .contact .contact-form .btn:hover {
     color: #fab43c;
     background: #fbfbfa;
 }
-
 
 /*******************************/
 /******* Single Page CSS *******/
@@ -1188,7 +1115,7 @@ a:focus {
 .single .ul-group li::before {
     position: relative;
     content: "\f0da";
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 900;
     margin-right: 10px;
 }
@@ -1204,8 +1131,8 @@ a:focus {
     position: relative;
     margin-top: 45px;
     padding-top: 180px;
-    background: #fab43c;
-    color: #080808;
+    background: #039342;
+    color: #faf9f9;
 }
 
 .footer .footer-about,
@@ -1213,7 +1140,7 @@ a:focus {
 .footer .footer-contact {
     position: relative;
     margin-bottom: 45px;
-    color: #030303;
+    color: #fcfbfb;
 }
 
 .footer .footer-about h2,
@@ -1223,14 +1150,14 @@ a:focus {
     margin-bottom: 30px;
     font-size: 25px;
     font-weight: 600;
-    color: #070707;
+    color: #fffefe;
 }
 
 .footer .footer-link a {
     display: block;
     margin-bottom: 10px;
-    color: #080808;
-    transition: .3s;
+    color: #f8f5f5;
+    transition: 0.3s;
 }
 
 .footer .footer-link a::before {
@@ -1242,7 +1169,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #fcfcfb;
+    color: #0bfb03;
     letter-spacing: 1px;
 }
 
@@ -1262,7 +1189,7 @@ a:focus {
 .footer .footer-social a i {
     margin-right: 15px;
     font-size: 18px;
-    color: #080808;
+    color: #fefdfd;
 }
 
 .footer .footer-social a:last-child i {
@@ -1270,27 +1197,27 @@ a:focus {
 }
 
 .footer .footer-social a:hover i {
-    color: #fab43c;
+    color: #0bfb03;
 }
 
 .footer .footer-menu .f-menu {
     position: relative;
     padding: 15px 0;
-    background: #000000;
+    background: #f7f6f6;
     font-size: 0;
     text-align: center;
 }
 
 .footer .footer-menu .f-menu a {
-    color: #080808;
+    color: #fdfbfb;
     font-size: 16px;
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid #fab43c;
+    border-right: 1px solid #0bfb03;
 }
 
 .footer .footer-menu .f-menu a:hover {
-    color: #fab43c;
+    color: #0bfb03;
 }
 
 .footer .footer-menu .f-menu a:last-child {
@@ -1298,7 +1225,6 @@ a:focus {
     padding-right: 0;
     border-right: none;
 }
-
 
 .footer .copyright {
     padding: 30px 15px;
@@ -1314,17 +1240,16 @@ a:focus {
 }
 
 .footer .copyright p a {
-    color: #fab43c;
+    color: #0bfb03;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
 .footer .copyright p a:hover {
-    color: #fab43c;
+    color: #0bfb03;
 }
 
 @media (max-width: 768px) {
-
     .footer .copyright p,
     .footer .copyright .col-md-6:last-child p {
         margin: 5px 0;
@@ -1388,7 +1313,7 @@ a:focus {
     font-size: 60px;
     color: #fbfbfb;
     background: #121518;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .service .service-item:hover .service-icon i {
@@ -1422,7 +1347,7 @@ a:focus {
     border: 2px solid #090909;
     border-radius: 0;
     background: #121518;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .service .service-item:hover a.btn {
